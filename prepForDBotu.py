@@ -2,7 +2,16 @@
 # -*- coding: utf-8 -*-
 """
 1 Read a file containing a list of directories, one on each line
-2 
+2 Performs various operations on them
+    "-count": Enumerate all sequence length 
+    "-trim": Trim down and remove short/long sequences
+             The argument for this task is formatted like "L#1H#2"
+             #1 = the truncation length (anything lower is discarded)
+             #2 = the cutoff for sequences deemed too long
+    "-trim-out": Newly trimmed (fasta) files written here 
+                 Required if "-trim" is specified
+                 The new file names are everything up to the first period "." + "trunc" + ".fasta" 
+
 2 Create a hash table of sequence lengths
 3 Print their distribution
 4 Trims them down to the minimum length 
@@ -17,12 +26,31 @@ from Bio import SeqIO
 import sys, os
 from collections import Counter
 
-## Fetch command line argument
-#for idx, arg in enumerate(sys.argv):
-#    if arg == "-i":
-#        fn = sys.argv[idx+1]
+# Prepare variables for command line arguments
+count_flag, trim_flag, fn = False, False, None
+trim_out_dir = None
 
-fn = "input_file.test"
+# Fetch command line argument
+for idx, arg in enumerate(sys.argv):
+    if arg == "-i":
+        fn = sys.argv[idx+1]
+    if arg == "-count":
+        count_flag = True
+    if arg == "-trim":
+        trim_flag = True
+        trim_lims = sys.argv[idx+1]
+        t_low, t_high = trim_lims.split("H")
+        trim_target, upper_bound = int(t_low[1:]), int(t_high)        
+    if arg == "-trim-out":
+        trim_out_dir = sys.argv[idx+1]
+
+if trim_flag and not trim_out_dir:
+    sys.exit("No trimming output directory specified")
+else:
+    if os.path.exists(trim_out_dir):
+        sys.exit("Output directory exists already")
+    else:
+        os.mkdir(trim_out_dir)
 
 # Ensure file exists and read each line into a list
 if os.path.exists(fn):
@@ -31,6 +59,7 @@ if os.path.exists(fn):
     dir_list = list(filter(None, dir_list))
 else:
     sys.exit("Input file {} not detected".format(fn))
+
 
 # Make a new list of files from list of directories
 file_list = []
@@ -42,16 +71,26 @@ print(report_1, file=sys.stdout)
 
 seq_lengths = Counter()
 
-# First we trim everything 
+# This is where we open the files are parse them in whatever way was specified
+
 for seq_file in file_list:
     if seq_file.endswith(".fastq"):
         fast_sequences = SeqIO.parse(open(seq_file, "r"), 'fastq')
     else:
         fast_sequences = SeqIO.parse(open(seq_file, "r"), 'fasta')
     
-    for fast_ in fast_sequences:
-        name, sequence = fast_.id, str(fast_.seq)
-        seq_lengths[len(sequence)] += 1
+    if count_flag:
+        for fast_ in fast_sequences:
+            seq_lengths[len(fast_)] += 1
+        print("Processed {}".format(seq_file))
+
+    if trim_flag:
+
+???
+
+if count_flag:
+    for length_, count_ in seq_lengths.items():
+        print("{}: {}".format(length_, count_))
 
 sys.exit()
 
