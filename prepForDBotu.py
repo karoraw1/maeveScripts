@@ -15,11 +15,14 @@ writes it back out again with modified headers
 from __future__ import print_function
 from Bio import SeqIO
 import sys, os
+from collections import Counter
 
-# Fetch command line argument
-for idx, arg in enumerate(sys.argv):
-    if arg == "-i":
-        fn = sys.argv[idx+1]
+## Fetch command line argument
+#for idx, arg in enumerate(sys.argv):
+#    if arg == "-i":
+#        fn = sys.argv[idx+1]
+
+fn = "input_file.test"
 
 # Ensure file exists and read each line into a list
 if os.path.exists(fn):
@@ -37,11 +40,22 @@ for dir_ in dir_list:
 report_1 = "{} files detected in {} directories".format(len(file_list), len(dir_list))
 print(report_1, file=sys.stdout)
 
-for seq_file in file_list[:1]:
+seq_lengths = Counter()
+
+# First we trim everything 
+for seq_file in file_list:
     if seq_file.endswith(".fastq"):
         fast_sequences = SeqIO.parse(open(seq_file, "r"), 'fastq')
     else:
         fast_sequences = SeqIO.parse(open(seq_file, "r"), 'fasta')
+    
+    for fast_ in fast_sequences:
+        name, sequence = fast_.id, str(fast_.seq)
+        seq_lengths[len(sequence)] += 1
+
+sys.exit()
+
+seq_cnt = Counter()
 
 sys.exit()
 
