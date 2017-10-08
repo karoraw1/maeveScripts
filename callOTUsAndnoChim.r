@@ -21,7 +21,7 @@ for(sam in sample.names) {
   dds[[sam]] <- dada(derep, err=err, multithread=TRUE)
 }
 
-save(dds, file="/home-3/karoraw1@jhu.edu/work/sprehei1/Keith_Files/maeveScripts/raw_otu_table.RData")
+save(dds, file="/data/sprehei1/Keith_Maeve1_138650/raw_otu_table.RData")
 
 seqtab1 <- makeSequenceTable(dds)
 saveRDS(seqtab1, "/data/sprehei1/Keith_Maeve1_138650/seqtab_chim.rds")
