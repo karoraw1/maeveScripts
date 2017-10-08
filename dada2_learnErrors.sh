@@ -12,5 +12,8 @@
 #SBATCH --output=errors_dada.out
 
 module load R/3.4.0
+module load python/2.7.10
+
+python prepForDBotu.py -i demux_derep_trim_dirs.txt -trim L270H281 -trim-out /data/sprehei1/Keith_Maeve1_138650/Truncated_Fastq_4
 Rscript /home-3/karoraw1@jhu.edu/work/sprehei1/Keith_Files/maeveScripts/learnErrors.r
 

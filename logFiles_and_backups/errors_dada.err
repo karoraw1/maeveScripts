@@ -1,0 +1,17 @@
+
+The following have been reloaded with a version change:
+  1) gcc/4.8.2 => gcc/5.1.0
+
+During startup - Warning messages:
+1: Setting LC_CTYPE failed, using "C" 
+2: Setting LC_COLLATE failed, using "C" 
+3: Setting LC_TIME failed, using "C" 
+4: Setting LC_MESSAGES failed, using "C" 
+5: Setting LC_MONETARY failed, using "C" 
+6: Setting LC_PAPER failed, using "C" 
+7: Setting LC_MEASUREMENT failed, using "C" 
+Loading required package: Rcpp
+Loading required package: methods
+Warning message:
+In dada(drps, err = NULL, selfConsist = TRUE, multithread = multithread) :
+  Self-consistency loop terminated before convergence.
