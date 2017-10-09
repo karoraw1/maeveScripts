@@ -8,3 +8,4 @@ During startup - Warning messages:
 7: Setting LC_MEASUREMENT failed, using "C" 
 Loading required package: Rcpp
 Loading required package: methods
+slurmstepd: error: *** JOB 13910505 ON bigmem0025 CANCELLED AT 2017-10-09T06:04:37 DUE TO TIME LIMIT ***
