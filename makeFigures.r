@@ -1,15 +1,40 @@
+library(dplyr)
 library(ggplot2)
 library(dada2)
 library(phyloseq)
 
 # 
+setwd("~/Documents/maeveScripts")
+samdf <- read.csv("data/sequencing_metadata.csv", header = TRUE, sep = ",", 
+			      quote = "\"",dec = ".", fill = TRUE, comment.char = "", row.names=1)
+taxa <- readRDS("data/tax_nosp_final.rds")
+seqtab <- readRDS("data/seqtab_nochim.rds")
+sd <- sample_data(samdf)
 
-read.csv(file, header = TRUE, sep = ",", quote = "\"",dec = ".", fill = TRUE, comment.char = "")
+ps <- phyloseq(otu_table(seqtab, taxa_are_rows=FALSE), sd, tax_table(taxa))
+not_controls <- rownames(sd[sd[,"Control"] != TRUE])
+ps.exp <- prune_samples(not_controls, ps) 
+ps.bac <- ps.exp %>% subset_taxa(Kingdom == "Bacteria" & Family  != "mitochondria" & Class   != "Chloroplast")
+ps.2016.exp <- ps.exp %>% subset_samples(Year == 2016) %>% prune_taxa(taxa_sums(.) > 0, .)
+ps.2016 <- ps.bac %>% subset_samples(Year == 2016) %>% prune_taxa(taxa_sums(.) > 0, .)
 
-taxa <- readRDS("/data/sprehei1/Keith_Maeve1_138650/tax_nosp_final.rds")
-seqtab <- readRDS("/data/sprehei1/Keith_Maeve1_138650/seqtab_nochim.rds")
-ps <- phyloseq(otu_table(seqtab, taxa_are_rows=FALSE), sample_data(samdf), 
-               tax_table(taxa))
+alpha_path = "data/alpha_diversity.png"
+png(alpha_path, width = 800, height = 480)
+plot_richness(ps.2016, x="Station.Number", measures=c("Shannon"), color="Month") + theme_bw(base_size = 18)
+dev.off()
+
+beta_path = "data/pca_of_beta_diversity.png"
+ord.pcoa.bray <- ordinate(ps.2016, method="PCoA", distance="bray")
+png(beta_path, width = 600, height = 600)
+plot_ordination(ps, ord.pcoa.bray, color="Station", title="PCA of Bray Distances") + theme_bw(base_size = 18)
+dev.off()
 
 
-
+ps.33c <- ps.bac %>% subset_samples(Station == "CB3.3C") %>% prune_taxa(taxa_sums(.) > 0, .)
+topSp <- names(sort(taxa_sums(ps.33c), decreasing=TRUE))[1:30]
+ps.topSp <- transform_sample_counts(ps.33c, function(OTU) OTU/sum(OTU))
+ps.topSp <- prune_taxa(topSp, ps.topSp)
+taxa_fig_path = "data/taxaBreakdown_by_year.png"
+png(taxa_fig_path, width = 800, height = 600)
+plot_bar(ps.topSp, x="Depth", fill="Order") + facet_wrap(~Year, scales="free_x") + theme_bw(base_size = 18)
+dev.off()
