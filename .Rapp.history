@@ -1,0 +1,487 @@
+biom_file <- system.file("extdata", "min_sparse_otu_table.biom", package = "biomformat")
+typeof(biom_file)
+biom_file
+b <- read_biom(biom_file)
+typeof(b)
+biom2MRexperiment(b)
+b
+fix(b)
+dataDirectory <- system.file("extdata", package="metagenomeSeq")
+dataDirectory
+lung = loadMeta(file.path(dataDirectory,"CHK_NAME.otus.count.csv"))
+typeof(lung)
+dim(lung)
+length(lung)
+fix(lung)
+lungdf = as.data.frame(lung)
+fix(lungdf)
+dim(lungdf)
+dim(lung$counts)
+lungdf = as.data.frame(lung$counts)
+dim(lungdf)
+taxa = read.delim(file.path(dataDirectory,"CHK_otus.taxonomy.csv"),stringsAsFactors=FALSE)
+dim(taxa)
+head(taxa)
+clin = loadPhenoData(file.path(dataDirectory,"CHK_clinical.csv"),tran=TRUE)
+ord = match(colnames(lung$counts),rownames(clin))
+typeof(ord)
+ord
+match?
+d
+?match
+dim(clin)
+dim(lungdf)
+length(ord)
+clin = clin[ord,]
+dim(clin)
+head(clin[1:2,])
+fix(clin)
+phenotypeData = AnnotatedDataFrame(clin)
+phenotypeData
+OTUdata = AnnotatedDataFrame(taxa)
+obj = newMRexperiment(lung$counts,phenoData=phenotypeData,featureData=OTUdata)
+dim(phenotypeData)
+dim(OTUdata)
+colnames(OTUData)
+colnames(OTUdata)
+head(normFactors(obj))
+normFactors(obj) <- rnorm(ncol(obj))
+head(normFactors(obj))
+?rnorm()
+data(lungData)
+typeof(lungData)
+dim(lungData)
+p=cumNormStatFast(lungData)
+typeof(p)
+p
+lungData = cumNorm(lungData,p=p)
+data(lungData)#
+controls = grep("Extraction.Control",pData(lungData)$SampleType)#
+lungTrim = lungData[,-controls]#
+rareFeatures = which(rowSums(MRcounts(lungTrim)>0)<10)#
+lungTrim = lungTrim[-rareFeatures,]
+lungp = cumNormStat(lungTrim,pFlag=TRUE,main="Trimmed lung data")
+lungp
+dim(lungTrim)
+lungTrim = cumNorm(lungTrim,p=lungp)
+dim(lungTrim)
+lungTrim[:5, :5]
+lungTrim[1:5, 1:5]
+names(lungTrim)
+lungTrim$counts[1:5, 1:5]
+lungTrim$counts
+lungTrim$assayData
+df = as.data.frame(lungTrim)
+normFactor = normFactors(lungTrim)
+normFactor
+normFactor = log2(normFactor/median(normFactor) + 1)
+normFactor
+normFactors(lungData)
+cumNormMat(lungData)
+dim(cumNormMat(lungData))
+normData = as.data.frame(cumNormMat(lungData))
+dim(normData)
+library(metagenomeSeq)#
+dataDirectory <- system.file("extdata", package="metagenomeSeq")#
+lung = loadMeta(file.path(dataDirectory,"CHK_NAME.otus.count.csv"))#
+taxa = read.delim(file.path(dataDirectory,"CHK_otus.taxonomy.csv"),stringsAsFactors=FALSE)#
+clin = loadPhenoData(file.path(dataDirectory,"CHK_clinical.csv"),tran=TRUE)#
+ord = match(colnames(lung$counts),rownames(clin)) #
+clin = clin[ord,]#
+phenotypeData = AnnotatedDataFrame(clin)#
+OTUdata = AnnotatedDataFrame(taxa)#
+lungData = newMRexperiment(lung$counts,phenoData=phenotypeData,featureData=OTUdata)#
+p=cumNormStatFast(lungData)#
+lungData = cumNorm(lungData,p=p)#
+normData = as.data.frame(cumNormMat(lungData))
+lung$counts
+type(lungData)
+typeof(lungData)
+install.packages("CHNOSZ")
+library(CHNOSZ)
+rxn1 <- subcrt(c("formaldehyde","HCN","H2O","glycolic acid","NH3"),#
+c(-1,-1,-2,1,1),P=300)
+data(thermo)
+rxn1 <- subcrt(c("formaldehyde","HCN","H2O","glycolic acid","NH3"),#
+c(-1,-1,-2,1,1),P=300)
+rxn1
+quit()
+install.packages("marelac", dependencies=T)
+library(marelac)
+gas_satconc(S = 35, t = 25, P = 1.013253)
+gas_satconc(S = 35, t = 25, P = 1.013253)("N2")
+gas_satconc(S = 35, t = 25, P = 1.013253)["N2"]
+gravity(39.285420)
+install.packages("AquaEnv", dependencies=T)
+rm(list=ls())
+library(AquaEnv)#
+library(marelac)#
+library(deSolve)
+parameters <- list(#
+	S = 25 , # psu#
+	t = 15 , # degrees C#
+	k = 0.4 , # 1/d proportionality factor for air-water exchange#
+	rOx = 0.0000003 , # mol-N/(kg*d) maximal rate of oxic mineralisation#
+	rNitri = 0.0000002 , # mol-N/(kg*d) maximal rate of nitrification#
+	rPP = 0.0000006 , # mol-N/(kg*d) maximal rate of primary production#
+	ksSumNH4 = 0.000001 , # mol-N/kg#
+	D = 0.1 , # 1/d (dispersive) transport coefficient#
+	SumNH4_io = 0.000008 , # mol/kg-soln#
+	SumCO2_io = 0.002320 , # mol/kg-soln#
+	TA_io = 0.002435 , # mol/kg-soln#
+	C_Nratio = 8 , # mol C/mol N C:N ratio of organic matter#
+	a = 5 , # time from which PriPro begins#
+	b = 20 , # time where PriPro shuts off again#
+	modeltime = 30 # duration of the model#
+)
+boxmodel <- function(timestep, currentstate, parameters)#
+{#
+	with (#
+		as.list(c(currentstate,parameters)),#
+		{#
+			# the "classical" implicit pH calculation method is applied in aquaenv#
+			ae <- aquaenv(S=S, t=t, SumCO2=sumCO2,#
+			              SumNH4=sumNH4, TA=alkalinity, dsa=TRUE)#
+#
+			ECO2 <- k * (ae$CO2_sat - ae$CO2)#
+#
+			RNit <- rNitri#
+			ROx <- rOx#
+#
+			if ((timestep > a) && (timestep < b))#
+				RPP <- rPP * (sumNH4/(ksSumNH4 + sumNH4))#
+			else#
+				RPP <- 0#
+#
+			dsumCO2 <- ECO2 + C_Nratio*ROx - C_Nratio*RPP#
+			Andreas F. Hofmann, Karline Soetaert and Mathilde Hagens 29#
+			dsumNH4 <- ROx - RNit - RPP#
+			dalkalinity <- ROx - 2*RNit - RPP#
+#
+			# The DSA pH#
+			dH <- (dalkalinity - (dsumCO2*ae$dTAdSumCO2 + dsumNH4*ae$dTAdSumNH4))/ae$dTAdH#
+			DSApH <- -log10(H)#
+#
+			# The DSA pH using pH dependent fractional stoichiometry (= using partitioning coefficients)#
+			rhoHECO2 <- ae$c2 + 2*ae$c3#
+			rhoHRNit <- 1 + ae$n1#
+			rhoHROx <- C_Nratio * (ae$c2 + 2*ae$c3) - ae$n1#
+			rhoHRPP <- -(C_Nratio * (ae$c2 + 2*ae$c3)) + ae$n1#
+#
+			dH_ECO2 <- rhoHECO2*ECO2/(-ae$dTAdH)#
+			dH_RNit <- rhoHRNit*RNit/(-ae$dTAdH)#
+			dH_ROx <- rhoHROx*ROx /(-ae$dTAdH)#
+			dH_RPP <- rhoHRPP*RPP /(-ae$dTAdH)#
+#
+			dH_stoich <- dH_ECO2 + dH_RNit + dH_ROx + dH_RPP#
+			DSAstoichpH <- -log10(H_stoich)#
+#
+			ratesofchanges <- c(dsumNH4, dsumCO2, dalkalinity, dH, dH_stoich)#
+			processrates <- c(ECO2=ECO2, RNit=RNit, ROx=ROx, RPP=RPP)#
+			DSA <- c(DSApH=DSApH, rhoHECO2=rhoHECO2, rhoHRNit=rhoHRNit, rhoHROx=rhoHROx,#
+			         rhoHRPP=rhoHRPP, dH_ECO2=dH_ECO2, dH_RNit=dH_RNit, dH_ROx=dH_ROx,#
+			         dH_RPP=dH_RPP, DSAstoichpH=DSAstoichpH)#
+#
+			return(list(ratesofchanges, processrates, DSA, ae))#
+		})#
+}
+rm(list=ls())
+library(AquaEnv)#
+library(marelac)#
+library(deSolve)
+parameters <- list(#
+	S = 25 , # psu#
+	t = 15 , # degrees C#
+	k = 0.4 , # 1/d proportionality factor for air-water exchange#
+	rOx = 0.0000003 , # mol-N/(kg*d) maximal rate of oxic mineralisation#
+	rNitri = 0.0000002 , # mol-N/(kg*d) maximal rate of nitrification#
+	rPP = 0.0000006 , # mol-N/(kg*d) maximal rate of primary production#
+	ksSumNH4 = 0.000001 , # mol-N/kg#
+	D = 0.1 , # 1/d (dispersive) transport coefficient#
+	SumNH4_io = 0.000008 , # mol/kg-soln#
+	SumCO2_io = 0.002320 , # mol/kg-soln#
+	TA_io = 0.002435 , # mol/kg-soln#
+	C_Nratio = 8 , # mol C/mol N C:N ratio of organic matter#
+	a = 5 , # time from which PriPro begins#
+	b = 20 , # time where PriPro shuts off again#
+	modeltime = 30 # duration of the model#
+)
+boxmodel <- function(timestep, currentstate, parameters)#
+{#
+	with (#
+		as.list(c(currentstate,parameters)),#
+		{#
+			# the "classical" implicit pH calculation method is applied in aquaenv#
+			ae <- aquaenv(S=S, t=t, SumCO2=sumCO2,#
+			              SumNH4=sumNH4, TA=alkalinity, dsa=TRUE)#
+#
+			ECO2 <- k * (ae$CO2_sat - ae$CO2)#
+#
+			RNit <- rNitri#
+			ROx <- rOx#
+#
+			if ((timestep > a) && (timestep < b))#
+				RPP <- rPP * (sumNH4/(ksSumNH4 + sumNH4))#
+			else#
+				RPP <- 0#
+#
+			dsumCO2 <- ECO2 + C_Nratio*ROx - C_Nratio*RPP#
+			dsumNH4 <- ROx - RNit - RPP#
+			dalkalinity <- ROx - 2*RNit - RPP#
+#
+			# The DSA pH#
+			dH <- (dalkalinity - (dsumCO2*ae$dTAdSumCO2 + dsumNH4*ae$dTAdSumNH4))/ae$dTAdH#
+			DSApH <- -log10(H)#
+#
+			# The DSA pH using pH dependent fractional stoichiometry (= using partitioning coefficients)#
+			rhoHECO2 <- ae$c2 + 2*ae$c3#
+			rhoHRNit <- 1 + ae$n1#
+			rhoHROx <- C_Nratio * (ae$c2 + 2*ae$c3) - ae$n1#
+			rhoHRPP <- -(C_Nratio * (ae$c2 + 2*ae$c3)) + ae$n1#
+#
+			dH_ECO2 <- rhoHECO2*ECO2/(-ae$dTAdH)#
+			dH_RNit <- rhoHRNit*RNit/(-ae$dTAdH)#
+			dH_ROx <- rhoHROx*ROx /(-ae$dTAdH)#
+			dH_RPP <- rhoHRPP*RPP /(-ae$dTAdH)#
+#
+			dH_stoich <- dH_ECO2 + dH_RNit + dH_ROx + dH_RPP#
+			DSAstoichpH <- -log10(H_stoich)#
+#
+			ratesofchanges <- c(dsumNH4, dsumCO2, dalkalinity, dH, dH_stoich)#
+			processrates <- c(ECO2=ECO2, RNit=RNit, ROx=ROx, RPP=RPP)#
+			DSA <- c(DSApH=DSApH, rhoHECO2=rhoHECO2, rhoHRNit=rhoHRNit, rhoHROx=rhoHROx,#
+			         rhoHRPP=rhoHRPP, dH_ECO2=dH_ECO2, dH_RNit=dH_RNit, dH_ROx=dH_ROx,#
+			         dH_RPP=dH_RPP, DSAstoichpH=DSAstoichpH)#
+#
+			return(list(ratesofchanges, processrates, DSA, ae))#
+		})
+}
+with (as.list(parameters),#
+	{#
+	H_init <<- 10^(-(aquaenv(S=S, t=t, SumCO2=SumCO2_io, SumNH4=SumNH4_io, TA=TA_io,#
+	                         speciation=FALSE)$pH))#
+	initialstate <<- c(sumNH4=SumNH4_io, sumCO2=SumCO2_io, alkalinity =TA_io, H=H_init,#
+	                   H_stoich=H_init)#
+	times <<- c(0:modeltime)#
+	})
+H_init
+output <- vode(initialstate, times, boxmodel, parameters, hmax=1)
+typeof(times)
+times
+names(output)
+typeof(output)
+length(output)
+shape(output)
+dim(output)
+dim(initialstate)
+length(initialstate)
+initialstate
+fix(output)
+library("boot")    #
+a <- c(2500, 3500)#
+A2 <- matrix(c(50, 150, 500, 250), ncol=2, nrow=2, byrow=TRUE)#
+b2 <- c(900, 2500)#
+simplex(a, A2 = A2, b2 = b2, maxi=FALSE)
+a
+A2
+b
+b2
+a
+a2
+A2
+fat <- c(800, 6000, 1000, 400)
+init = <-c(2, 2, 3, 0.5)
+init = c(2, 2, 3, 0.5)
+init*fat
+sum(init*fat)
+A2_ <- rbind(c(2, 1), c(1, 1), c(0, 1), c(1, 0))
+A2_
+cbind(10, 6)
+rm(list=ls())
+library(boot)
+a_ <- c(3, 2)
+A1_ <- c(-3, 2)
+b1_ <- 6
+A2_ <- rbind(c(2, 1), c(1, 1))
+b2_ <- rbind(10, 6)
+simplex(a = a_, A1 = A1_, b1 = b1_, A2 = A2_, b2 = b2_, maxi = FALSE)
+a_ <- c(3, 2, 4)#
+A2_ <- c(3, 3, 5)#
+b2_ <- 120#
+A3_ <- c(2, 1, 3)#
+b3_ <- 60#
+#
+simplex(a = a_, A2 = A2_, b2 = b2_, A3 = A3_, b3 = b3_, maxi = FALSE)
+a_
+A2_
+b2_
+rm(list = ls())
+a_ <- c(3, 2, 4)
+A2_ <- c(3, 3, 5)
+b2_ = 120
+A3_ = c(2, 1, 3)
+b3_ = 60
+simplex(a_, A1= NULL, b1=NULL, A2=A2_, b2=b2_, A3=A3_, b3=b3_, maxi=FALSE)
+a_ <- c(3, 2, 4, 5)#
+A2_ <- c(3, 3, 5, 1)#
+b2_ <- 120#
+A3_ <- c(2, 1, 3, 1)#
+b3_ <- 60#
+#
+simplex(a = a_, A2 = A2_, b2 = b2_, A3 = A3_, b3 = b3_, maxi = FALSE)
+a = c(1, 2, 3, 4)
+b = c(2, 2, 2, 2)
+a - (0.5*b)
+1/4/3
+1/12
+ls()
+typeof(fnFs)
+length(fnFs)
+fnFs
+hat = 'hat'
+ls()
+save(file=/Users/login/cowdata.RData)
+quit()
+ls()
+hat = "hat"
+ls()
+save("/Users/login/hat.RData")
+save(file="/Users/login/hat.RData")
+save(hat, file="/Users/login/hat.RData")
+rm(list=ls())
+ls()
+load("/Users/login/hat.RData")
+ls()
+hat
+ls()
+library(phyloseq)
+library(dplyr)#
+library(ggplot2)#
+library(dada2)#
+#
+# #
+setwd("~/Documents/maeveScripts")#
+samdf <- read.csv("data/sequencing_metadata.csv", header = TRUE, sep = ",", #
+			      quote = "\"",dec = ".", fill = TRUE, comment.char = "", row.names=1)#
+taxa <- readRDS("data/tax_nosp_final.rds")#
+seqtab <- readRDS("data/seqtab_nochim.rds")#
+sd <- sample_data(samdf)#
+#
+ps <- phyloseq(otu_table(seqtab, taxa_are_rows=FALSE), sd, tax_table(taxa))#
+not_controls <- rownames(sd[sd[,"Control"] != TRUE])#
+ps.exp <- prune_samples(not_controls, ps)
+sample_sums(ps.exp)
+hist(sample_sums(ps.exp))
+sort(sample_sums(ps.exp))
+fix(samdf[c("AAGGAACG", "CCGCACCG", "CGAATATT"),])
+a = samdf[c("AAGGAACG", "CCGCACCG", "CGAATATT"),]
+dim(a
+)
+fix(a)
+not_controls <- rownames(sd[sd[,"Control"] != TRUE])
+typeof(not_controls)
+vector("list", 3)
+not_controls[c("AAGGAACG", "CCGCACCG", "CGAATATT")]
+not_controls
+list(not_controls)
+as.list(not_controls)
+small_samples = c("AAGGAACG", "CCGCACCG", "CGAATATT")#
+not_controls <- rownames(sd[sd[,"Control"] != TRUE])#
+big_not_controls <- not_controls[! not_controls %in% small_samples]
+length(not_controls)
+length(big_not_controls)
+ps.exp <- prune_samples(not_controls, ps)
+ps.bac <- ps.exp %>% subset_taxa(Kingdom == "Bacteria" & Family  != "mitochondria" & Class   != "Chloroplast")
+?rarefy_even_depth
+min(sample_sums(ps.bac)
+)
+min(sample_sums(ps.exp))
+min(sample_sums(ps))
+ps.exp <- prune_samples(big_not_controls, ps)
+ps.bac <- ps.exp %>% subset_taxa(Kingdom == "Bacteria" & Family  != "mitochondria" & Class   != "Chloroplast")
+min(sample_sums(ps.bac))
+sort(sample_sums(ps.bac))
+ps.rar.bac <- rarefy_even_depth(ps.bac)
+ps.2016.exp <- ps.exp %>% subset_samples(Year == 2016) %>% prune_taxa(taxa_sums(.) > 0, .)
+rm(list=ls())
+library(phyloseq)#
+library(dplyr)#
+library(ggplot2)#
+library(dada2)#
+#
+# #
+setwd("~/Documents/maeveScripts")#
+samdf <- read.csv("data/sequencing_metadata.csv", header = TRUE, sep = ",", #
+			      quote = "\"",dec = ".", fill = TRUE, comment.char = "", row.names=1)#
+taxa <- readRDS("data/tax_nosp_final.rds")#
+seqtab <- readRDS("data/seqtab_nochim.rds")#
+sd <- sample_data(samdf)#
+#
+ps <- phyloseq(otu_table(seqtab, taxa_are_rows=FALSE), sd, tax_table(taxa))#
+small_samples = c("AAGGAACG", "CCGCACCG", "CGAATATT")#
+not_controls <- rownames(sd[sd[,"Control"] != TRUE])#
+big_not_controls <- not_controls[! not_controls %in% small_samples]#
+#
+ps.exp <- prune_samples(big_not_controls, ps) #
+ps.bac <- ps.exp %>% subset_taxa(Kingdom == "Bacteria" & Family  != "mitochondria" & Class   != "Chloroplast")#
+ps.rar.bac <- rarefy_even_depth(ps.bac)#
+ps.rar.2016 <- ps.rar.bac %>% subset_samples(Year == 2016) %>% prune_taxa(taxa_sums(.) > 0, .)
+set.seed(100)
+?rarefy_even_depth
+ps.rar.bac <- rarefy_even_depth(ps.bac)
+ps.rar.bac <- rarefy_even_depth(ps.bac)
+ps.rar.bac <- rarefy_even_depth(ps.bac, rngseed=100)
+ps.rar.bac <- rarefy_even_depth(ps.bac, rngseed=100)
+ps.rar.2016 <- ps.rar.bac %>% subset_samples(Year == 2016) %>% prune_taxa(taxa_sums(.) > 0, .)
+alpha_path = "data/alpha_diversity.png"
+png(alpha_path, width = 800, height = 480)
+plot_richness(ps.rar.2016, x="Station.Number", measures=c("Shannon"), color="Month") + theme_bw(base_size = 18)
+dev.off()
+ps.rar.bac <- rarefy_even_depth(ps.exp, rngseed=100)
+ps.rar.2016 <- ps.rar.bac %>% subset_samples(Year == 2016) %>% prune_taxa(taxa_sums(.) > 0, .)
+alpha_path = "data/alpha_diversity.png"#
+png(alpha_path, width = 800, height = 480)#
+plot_richness(ps.rar.2016, x="Station.Number", measures=c("Shannon"), color="Month") + theme_bw(base_size = 18)#
+dev.off()
+ps.rar.bac <- rarefy_even_depth(ps.bac, rngseed=100)#
+ps.rar.2016 <- ps.rar.bac %>% subset_samples(Year == 2016) %>% prune_taxa(taxa_sums(.) > 0, .)#
+#
+alpha_path = "data/alpha_diversity.png"#
+png(alpha_path, width = 800, height = 480)#
+plot_richness(ps.rar.2016, x="Station.Number", measures=c("Shannon"), color="Month") + theme_bw(base_size = 18)#
+dev.off()
+beta_path = "data/pca_of_beta_diversity.png"#
+ord.pcoa.bray <- ordinate(ps.rar.2016, method="PCoA", distance="bray")#
+png(beta_path, width = 600, height = 600)#
+plot_ordination(ps.rar.2016, ord.pcoa.bray, color="Station", title="PCA of Bray Distances") + theme_bw(base_size = 18)#
+dev.off()
+ps.33c <- ps.rar.bac %>% subset_samples(Station == "CB3.3C") %>% prune_taxa(taxa_sums(.) > 0, .)#
+topSp <- names(sort(taxa_sums(ps.33c), decreasing=TRUE))[1:30]#
+ps.topSp <- transform_sample_counts(ps.33c, function(OTU) OTU/sum(OTU))#
+ps.topSp <- prune_taxa(topSp, ps.topSp)#
+taxa_fig_path = "data/taxaBreakdown_by_year.png"#
+png(taxa_fig_path, width = 800, height = 600)#
+plot_bar(ps.topSp, x="Depth", fill="Order") + facet_wrap(~Year, scales="free_x") + theme_bw(base_size = 18)#
+dev.off()
+topSp
+dim(taxa)
+taxa[topSp, ]
+dim(taxa[topSp, ])
+print(taxa[topSp, ])
+print(taxa[topSp, ], row.names=FALSE)
+print(as.data.frame(taxa[topSp, ], row.names=1), row.names=FALSE)
+a <- c(rep("A", 3), rep("B", 3), rep("C",2))#
+b <- c(1,1,2,4,1,1,2,2)#
+df <-data.frame(a,b)
+df
+duplicated(df)
+topSp_df = as.data.frame(taxa[topSp, ], row.names=1)
+topSp_df_nr = topSp_df[!duplicated(topSp_df), ]
+print(topSp_df_nr, row.names=FALSE)
+?write.csv
+taxa_tab_path = "data/top_species_names.csv"#
+topSp_df = as.data.frame(taxa[topSp, ], row.names=1)#
+topSp_df_nr = topSp_df[!duplicated(topSp_df), ]#
+write.csv(topSp_df_nr, taxa_tab_path, row.names=FALSE)
+exit()
+quit()
