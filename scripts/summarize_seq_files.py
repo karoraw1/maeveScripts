@@ -38,12 +38,12 @@ for i in directories:
             map_pool.append(full_file_path)
 
 for idx, sht in enumerate(sheets):
-    metadata_df = pd.read_excel(new_master_f, sheet_name="")
+    metadata_df = pd.read_excel(new_master_f, sheet_name=sht)
+    print "Sheet {} has {} cols/rows".format(sht, metadata_df.shape)
     # pick columns with relavent info
     if idx == 0:
         super_map = metadata_df.copy()
     else:
         final_super_map = super_map.append(metadata_df)
         
-
-#print "\tShape is:", metadata_df.shape
+print "\tShape is: {}", final_super_map.shape
