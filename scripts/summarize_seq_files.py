@@ -36,25 +36,24 @@ sheets = ['esakows1_132789',
           'Keith_Maeve1_138650',
           'MiSeq_data_SarahPreheim_Sept16',
           'sprehei1_122704']
-
 reseq_files = ['sprehei1_123382']
 directories = copy.copy(sheets+reseq_files)
 directories[2] = 'Miseq_data_SarahPreheim_Sept2016'
 
-seq_pool, map_pool, total_size = [], [], 0
-
+seqIDtoFileDict, total_size = {}, 0 
 for i in directories:
+    seqIDtoFileDict[i] = []
     full_dir_path = os.path.join(base_data_path, i)
     print "DIR: {} detected".format(i)
     for f in os.listdir(full_dir_path):
         full_file_path = os.path.join(full_dir_path, f)
         if ".fastq" in f:
-            seq_pool.append(full_file_path)
+            seqIDtoFileDict[i].append(full_file_path)
             this_size = file_size(full_file_path)
             #print "\t{} : {}".format(f, convert_bytes(this_size)) 
             total_size += this_size
         elif ".txt" in f:
-            map_pool.append(full_file_path)
+            seqIDtoFileDict[i].append(full_file_path)
 
 print "All sequence files total {}\n".format(convert_bytes(total_size))
 
@@ -67,6 +66,9 @@ print "Metadata sheet exists:", os.path.exists(new_master_f)
 for idx, sht in enumerate(sheets):
     metadata_df = pd.read_excel(new_master_f, sht)
     print "Sheet {} has {} cols/rows".format(sht, metadata_df.shape)
+
+    # This section adds entries to the metadata df corresponding
+    # to resequenced files. 
     resequences = metadata_df.Resequencingfiles.notnull()
     print "Number of resequencing entries:", resequences.sum()
     if resequences > 0:
@@ -83,12 +85,12 @@ for idx, sht in enumerate(sheets):
         entries_to_duplicate.ix[:, "sequencingID"] = [reseq]*resequences.sum()
         metadata_df = metadata_df.append(entries_to_duplicate, ignore_index=True)
 
-sequencingID
-        
     if idx == 0:
         super_map = metadata_df.copy()
     else:
         super_map = super_map.append(metadata_df, ignore_index=True)
         
 print "\tFull metadata df is: {}".format( super_map.shape )
+
+seqIDs = super_map.sequencingID.unique()
 
