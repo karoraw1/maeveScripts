@@ -70,12 +70,12 @@ for idx, sht in enumerate(sheets):
     # This section adds entries to the metadata df corresponding
     # to resequenced files. 
     resequences = metadata_df.Resequencingfiles.notnull()
-    print "Number of resequencing entries:", resequences.sum()
-    if resequences > 0:
+    print "\tNumber of resequencing entries:", resequences.sum()
+    if resequences.sum() > 0:
+        entries_to_duplicate = metadata_df.ix[resequences, :].copy()
         reseq = entries_to_duplicate.Resequencingfiles.values[0]
         sames = (entries_to_duplicate.Resequencingfiles == reseq).sum()
-        print "No. of entries equal to {}: {}".format(reseq, sames)
-        entries_to_duplicate = metadata_df.ix[resequences, :].copy()
+        print "\tNo. of entries equal to {}: {}".format(reseq, sames)
         empty_filler = [""]*resequences.sum()
         entries_to_duplicate.ix[:, "Resequencingfiles"] = empty_filler
         entries_to_duplicate.ix[:, "sequencingfileindexname"] = empty_filler
@@ -90,7 +90,21 @@ for idx, sht in enumerate(sheets):
     else:
         super_map = super_map.append(metadata_df, ignore_index=True)
         
-print "\tFull metadata df is: {}".format( super_map.shape )
+print "\nFull metadata df is: {}".format( super_map.shape )
 
 seqIDs = super_map.sequencingID.unique()
 
+for sID in seqIDs:
+    sid_bool = super_map.sequencingID == sID
+    sid_subdf = super_map.ix[sid_bool, :]
+    sid_fwd = sid_subdf.sequencingfileforwardname.unique()
+    sid_rev = sid_subdf.sequencingfilereversename.unique()
+    sid_idx = sid_subdf.sequencingfileindexname.unique()
+    sid_map = sid_subdf.mappingfilename.unique()
+    print "\nSequence ID: {}".format(sID)
+    print "Files Expected:"
+    print "\t Seq files:", sid_fwd, sid_rev
+    print "\t Idx files:", sid_idx
+    print "\t Map files:", sid_map
+    print "Files discovered:"
+    print "\t", [os.path.basename(i) for i in seqIDtoFileDict[sID]]
