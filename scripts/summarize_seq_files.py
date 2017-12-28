@@ -99,25 +99,48 @@ seqIDs = super_map.sequencingID.unique()
 super_map.ix[:, "Demultiplexed"] = [False] * super_map.shape[0]
 super_map.ix[:, "DemuxFileRoot"] = [""] * super_map.shape[0]
 
+col_keys = ["Fwd", "Rev", "Idx", "Map"]
+demux_df = pd.DataFrame(index=seqIDs, columns=col_keys)
+
 for sID in seqIDs:
     sid_bool = super_map.sequencingID == sID
-    sid_subdf = super_map.ix[sid_bool, :]
     if sID == 'Miseq_data_SarahPreheim_Sept2016':
-        super_map.ix[sid_bool, "Demultiplexed"] = [ True ] * sid_subdf.shape[0]
+        super_map.ix[sid_bool, "Demultiplexed"] = [ True ] * sid_bool.sum()
         super_map.ix[sid_bool, "DemuxFileRoot"] = [ i.split("R1")[0] for i in super_map.ix[sid_bool, "sequencingfileforwardname"].tolist() ] 
-        super_map.ix[sid_bool, "sequencingfileindexname"] = [""] * sid_subdf.shape[0]
-        super_map.ix[sid_bool, "sequencingfilereversename"] = [""] * sid_subdf.shape[0] 
-        super_map.ix[sid_bool, "sequencingfileforwardname"] = [""] * sid_subdf.shape[0]
-
-    sid_fwd = sid_subdf.sequencingfileforwardname.unique()
-    sid_rev = sid_subdf.sequencingfilereversename.unique()
-    sid_idx = sid_subdf.sequencingfileindexname.unique()
-    sid_map = sid_subdf.mappingfilename.unique()
+        super_map.ix[sid_bool, "sequencingfileindexname"] = [""] * sid_bool.sum()
+        super_map.ix[sid_bool, "sequencingfilereversename"] = [""] * sid_bool.sum() 
+        super_map.ix[sid_bool, "sequencingfileforwardname"] = [""] * sid_bool.sum()
     
+    sid_subdf = super_map.ix[sid_bool, :]
+    files_n = [os.path.basename(i) for i in seqIDtoFileDict[sID]]
+    maps_n = [i for i in files_n if ".txt" in i]
+    seqs_n = [i for i in files_n if ".fast" in i]
+
+    sid_fwd = sid_subdf.sequencingfileforwardname.unique()[0]
+    sid_rev = sid_subdf.sequencingfilereversename.unique()[0]
+    sid_idx = sid_subdf.sequencingfileindexname.unique()[0]
+    sid_map = sid_subdf.mappingfilename.unique()[0]
+
+    detectors = []
+    candidates = [sid_fwd, sid_rev, sid_idx, sid_map]    
+    for idx, col_k, candi in zip(range(4), col_keys, candidates):
+        if candi in seqs_n or candi in maps_n:
+            detectors.append(True)
+            this_file = [i for i in files_n if candi in i]
+            assert len(this_file) == 1
+            demux_df.ix[sID, col_k] = this_file[0]
+        else:
+            detectors.append(False)
+            demux_df.ix[sID, col_k] = ""
+         
+    demuxed_bool = sid_subdf.Demultiplexed.unique()[0]
     print "\nSequence ID: {}".format(sID)
+    print "\tDemultiplexed?: {}".format(demuxed_bool)
     print "Files Expected:"
-    print "\t Seq files:", (len(sid_fwd) + len(sid_rev))
-    print "\t Idx files:", sid_idx
-    print "\t Map files:", sid_map
+    print "\t Fwd file: {} ( Exists: {})".format(sid_fwd, detectors[0])
+    print "\t Rev file: {} ( Exists: {})".format(sid_rev, detectors[1])
+    print "\t Idx file: {} ( Exists: {})".format(sid_idx, detectors[2])
+    print "\t Map files: {} ( Exists: {})".format(sid_map, detectors[3])
     print "Files discovered:"
-    print "\t", [os.path.basename(i) for i in seqIDtoFileDict[sID]]
+    print "\t Maps: {}".format(len(maps_n))
+    print "\t Seqs: {}".format(len(seqs_n)) 
