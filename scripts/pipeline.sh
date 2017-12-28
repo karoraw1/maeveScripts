@@ -18,11 +18,13 @@ module load python/2.7.10
 BASE_DIR=@#$
 
 
+# demultiplex 
+for i in `cat ./Barcode_sequences.txt`; do grep -B1 "$i" Undetermined_S0_L001_I1_001.fastq > "$i".ids.fastq; done
+
+
 # combine paired end reads
 mkdir Flash_Files
 scripts/flash Undetermined_S0_L001_R1_001.fastq.gz Undetermined_S0_L001_R2_001.fastq.gz -o Flash_Files -M 300
-
-# demultiplex 
 
 
 # add orphaned reads back
