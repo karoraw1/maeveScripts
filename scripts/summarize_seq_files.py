@@ -144,3 +144,14 @@ for sID in seqIDs:
     print "Files discovered:"
     print "\t Maps: {}".format(len(maps_n))
     print "\t Seqs: {}".format(len(seqs_n)) 
+
+    if sID == "sprehei1_123382":
+        potential_fwd = [i for i in seqs_n if "_R1_" in i][0]
+        potential_rev = [i for i in seqs_n if "_R2_" in i][0]
+        potential_idx = [i for i in seqs_n if "_I1_" in i][0]
+        fwd_path = [i for i in files_n if potential_fwd in i][0]
+        rev_path = [i for i in files_n if potential_rev in i][0]
+        idx_path = [i for i in files_n if potential_idx in i][0]
+        demux_df.ix[sID, "Fwd"] = fwd_path
+        demux_df.ix[sID, "Rev"] = rev_path
+        demux_df.ix[sID, "Idx"] = idx_path
