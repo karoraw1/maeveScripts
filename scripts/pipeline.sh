@@ -15,10 +15,8 @@ module load R/3.4.0
 module load python/2.7.10
 
 
+BASE_DIR=@#$
 
-# read in a list of files, with mate pairs listed on each line 
-
-# trim everything first and set aside orphans  
 
 # combine paired end reads
 mkdir Flash_Files

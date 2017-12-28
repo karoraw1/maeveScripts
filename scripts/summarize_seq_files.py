@@ -11,6 +11,8 @@ import pandas as pd
 import numpy as np
 import os
 
+write_directory="/home-3/karoraw1@jhu.edu/scratch/16S_Libraries"
+
 def convert_bytes(num):
     """
     this function will convert bytes to MB.... GB... etc
@@ -94,16 +96,27 @@ print "\nFull metadata df is: {}".format( super_map.shape )
 
 seqIDs = super_map.sequencingID.unique()
 
+super_map.ix[:, "Demultiplexed"] = [False] * super_map.shape[0]
+super_map.ix[:, "DemuxFileRoot"] = [""] * super_map.shape[0]
+
 for sID in seqIDs:
     sid_bool = super_map.sequencingID == sID
     sid_subdf = super_map.ix[sid_bool, :]
+    if sID == 'Miseq_data_SarahPreheim_Sept2016':
+        super_map.ix[sid_bool, "Demultiplexed"] = [ True ] * sid_subdf.shape[0]
+        super_map.ix[sid_bool, "DemuxFileRoot"] = [ i.split("R1")[0] for i in super_map.ix[sid_bool, "sequencingfileforwardname"].tolist() ] 
+        super_map.ix[sid_bool, "sequencingfileindexname"] = [""] * sid_subdf.shape[0]
+        super_map.ix[sid_bool, "sequencingfilereversename"] = [""] * sid_subdf.shape[0] 
+        super_map.ix[sid_bool, "sequencingfileforwardname"] = [""] * sid_subdf.shape[0]
+
     sid_fwd = sid_subdf.sequencingfileforwardname.unique()
     sid_rev = sid_subdf.sequencingfilereversename.unique()
     sid_idx = sid_subdf.sequencingfileindexname.unique()
     sid_map = sid_subdf.mappingfilename.unique()
+    
     print "\nSequence ID: {}".format(sID)
     print "Files Expected:"
-    print "\t Seq files:", sid_fwd, sid_rev
+    print "\t Seq files:", (len(sid_fwd) + len(sid_rev))
     print "\t Idx files:", sid_idx
     print "\t Map files:", sid_map
     print "Files discovered:"
