@@ -30,9 +30,13 @@ parallel -j 24 -a ../data/Barcode_sequences.txt "grep -B1 {} $RAW_BASE/$SEQ_ID/$
 ls $DEMUX_DIR/*.ids.fastq | parallel -j 24 "grep -A0 @M00776 {} >> {}.headers.txt"
 rm -r $DEMUX_DIR/*.ids.fastq
 parallel -j 24 "cat {} | sed 's/1:N:0:0//g' > {.}.2.txt" ::: $DEMUX_DIR/*.headers.txt
+parallel -j 24 "cat {} | sed 's/@M00776/>@M00776/g' > {.}.3.txt" ::: $DEMUX_DIR/*.headers.2.txt
 rm -r $DEMUX_DIR/*.headers.txt
 
 parallel -j 24 "./seqtk subseq $RAW_BASE/$SEQ_ID/$RAW_FWD {} > {.}.R1.fastq" ::: $DEMUX_DIR/*.2.txt
+parallel -j 24 "for line in `cat {}`; do grep --color -m 1 -A 1 $line >> {.}.R1.fastq; done" ::: $DEMUX_DIR/*.2.3.txt  
+
+
 
 # combine paired end reads
 mkdir Flash_Files
