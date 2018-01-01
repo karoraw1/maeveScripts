@@ -1,0 +1,967 @@
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+java -ea -Xmx447502m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAACAAGA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAACAAGA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAACAAGA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAACAAGA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAACAAGA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAACAAGA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               223.146 seconds.
+Reads Processed:    65317920 	292.71k reads/sec
+Bases Processed:    19595376000 	87.81m bases/sec
+Reads Out:          143010
+Bases Out:          42903000
+java -ea -Xmx447499m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAATCATT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAATCATT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAATCATT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAATCATT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAATCATT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAATCATT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               45.468 seconds.
+Reads Processed:    65317920 	1436.57k reads/sec
+Bases Processed:    19595376000 	430.97m bases/sec
+Reads Out:          206568
+Bases Out:          61970400
+java -ea -Xmx447506m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAATTGGA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAATTGGA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAATTGGA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAATTGGA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAATTGGA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAATTGGA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.945 seconds.
+Reads Processed:    65317920 	1557.25k reads/sec
+Bases Processed:    19595376000 	467.17m bases/sec
+Reads Out:          852568
+Bases Out:          255770400
+java -ea -Xmx447506m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AACAGTAT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AACAGTAT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AACAGTAT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AACAGTAT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AACAGTAT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AACAGTAT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.631 seconds.
+Reads Processed:    65317920 	1568.97k reads/sec
+Bases Processed:    19595376000 	470.69m bases/sec
+Reads Out:          729262
+Bases Out:          218778600
+java -ea -Xmx447506m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AACCCGTT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AACCCGTT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AACCCGTT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AACCCGTT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AACCCGTT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AACCCGTT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.554 seconds.
+Reads Processed:    65317920 	1571.86k reads/sec
+Bases Processed:    19595376000 	471.56m bases/sec
+Reads Out:          959906
+Bases Out:          287971800
+java -ea -Xmx447506m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAGGAACG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAGGAACG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAGGAACG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAGGAACG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAGGAACG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AAGGAACG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               44.206 seconds.
+Reads Processed:    65317920 	1477.57k reads/sec
+Bases Processed:    19595376000 	443.27m bases/sec
+Reads Out:          1288640
+Bases Out:          386592000
+java -ea -Xmx447506m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AATACAGG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AATACAGG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AATACAGG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AATACAGG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AATACAGG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AATACAGG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               38.869 seconds.
+Reads Processed:    65317920 	1680.45k reads/sec
+Bases Processed:    19595376000 	504.13m bases/sec
+Reads Out:          195724
+Bases Out:          58717200
+java -ea -Xmx447505m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AATGTCAA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AATGTCAA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AATGTCAA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AATGTCAA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AATGTCAA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AATGTCAA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.818 seconds.
+Reads Processed:    65317920 	1600.22k reads/sec
+Bases Processed:    19595376000 	480.07m bases/sec
+Reads Out:          541418
+Bases Out:          162425400
+java -ea -Xmx447506m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACAAACTA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACAAACTA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACAAACTA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACAAACTA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACAAACTA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACAAACTA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.390 seconds.
+Reads Processed:    65317920 	1578.10k reads/sec
+Bases Processed:    19595376000 	473.43m bases/sec
+Reads Out:          1184254
+Bases Out:          355276200
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACACCTCG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACACCTCG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACACCTCG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACACCTCG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACACCTCG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACACCTCG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               38.654 seconds.
+Reads Processed:    65317920 	1689.83k reads/sec
+Bases Processed:    19595376000 	506.95m bases/sec
+Reads Out:          26560
+Bases Out:          7968000
+java -ea -Xmx447510m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACCATACT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACCATACT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACCATACT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACCATACT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACCATACT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACCATACT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.916 seconds.
+Reads Processed:    65317920 	1558.30k reads/sec
+Bases Processed:    19595376000 	467.49m bases/sec
+Reads Out:          802480
+Bases Out:          240744000
+java -ea -Xmx447439m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACCTCCCA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACCTCCCA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACCTCCCA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACCTCCCA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACCTCCCA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACCTCCCA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.821 seconds.
+Reads Processed:    65317920 	1600.09k reads/sec
+Bases Processed:    19595376000 	480.03m bases/sec
+Reads Out:          645218
+Bases Out:          193565400
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACGGGCTG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACGGGCTG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACGGGCTG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACGGGCTG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACGGGCTG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACGGGCTG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               38.834 seconds.
+Reads Processed:    65317920 	1681.98k reads/sec
+Bases Processed:    19595376000 	504.59m bases/sec
+Reads Out:          81752
+Bases Out:          24525600
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACTAAGAT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACTAAGAT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACTAAGAT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACTAAGAT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACTAAGAT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACTAAGAT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.335 seconds.
+Reads Processed:    65317920 	1619.38k reads/sec
+Bases Processed:    19595376000 	485.81m bases/sec
+Reads Out:          865744
+Bases Out:          259723200
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACTTATTG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACTTATTG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACTTATTG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACTTATTG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACTTATTG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ACTTATTG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               39.552 seconds.
+Reads Processed:    65317920 	1651.43k reads/sec
+Bases Processed:    19595376000 	495.43m bases/sec
+Reads Out:          480586
+Bases Out:          144175800
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGAGAGGC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGAGAGGC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGAGAGGC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGAGAGGC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGAGAGGC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGAGAGGC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.770 seconds.
+Reads Processed:    65317920 	1602.09k reads/sec
+Bases Processed:    19595376000 	480.63m bases/sec
+Reads Out:          1026784
+Bases Out:          308035200
+java -ea -Xmx447503m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGCTGACG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGCTGACG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGCTGACG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGCTGACG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGCTGACG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGCTGACG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               45.955 seconds.
+Reads Processed:    65317920 	1421.33k reads/sec
+Bases Processed:    19595376000 	426.40m bases/sec
+Reads Out:          638464
+Bases Out:          191539200
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGGCTTCA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGGCTTCA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGGCTTCA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGGCTTCA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGGCTTCA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGGCTTCA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.044 seconds.
+Reads Processed:    65317920 	1591.43k reads/sec
+Bases Processed:    19595376000 	477.43m bases/sec
+Reads Out:          829838
+Bases Out:          248951400
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGGTCGGT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGGTCGGT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGGTCGGT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGGTCGGT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGGTCGGT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGGTCGGT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               38.815 seconds.
+Reads Processed:    65317920 	1682.79k reads/sec
+Bases Processed:    19595376000 	504.84m bases/sec
+Reads Out:          87402
+Bases Out:          26220600
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTAGATG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTAGATG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTAGATG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTAGATG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTAGATG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTAGATG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.945 seconds.
+Reads Processed:    65317920 	1595.24k reads/sec
+Bases Processed:    19595376000 	478.57m bases/sec
+Reads Out:          612734
+Bases Out:          183820200
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTATGCA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTATGCA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTATGCA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTATGCA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTATGCA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTATGCA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.961 seconds.
+Reads Processed:    65317920 	1594.63k reads/sec
+Bases Processed:    19595376000 	478.39m bases/sec
+Reads Out:          526700
+Bases Out:          158010000
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTCACCC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTCACCC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTCACCC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTCACCC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTCACCC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/AGTCACCC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               38.888 seconds.
+Reads Processed:    65317920 	1679.64k reads/sec
+Bases Processed:    19595376000 	503.89m bases/sec
+Reads Out:          78148
+Bases Out:          23444400
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATAGGTGG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATAGGTGG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATAGGTGG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATAGGTGG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATAGGTGG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATAGGTGG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               49.834 seconds.
+Reads Processed:    65317920 	1310.71k reads/sec
+Bases Processed:    19595376000 	393.21m bases/sec
+Reads Out:          867214
+Bases Out:          260164200
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATCGCACC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATCGCACC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATCGCACC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATCGCACC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATCGCACC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATCGCACC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               45.974 seconds.
+Reads Processed:    65317920 	1420.75k reads/sec
+Bases Processed:    19595376000 	426.22m bases/sec
+Reads Out:          442538
+Bases Out:          132761400
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATGAAGTA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATGAAGTA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATGAAGTA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATGAAGTA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATGAAGTA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATGAAGTA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               45.560 seconds.
+Reads Processed:    65317920 	1433.68k reads/sec
+Bases Processed:    19595376000 	430.10m bases/sec
+Reads Out:          227640
+Bases Out:          68292000
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATGCCAGC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATGCCAGC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATGCCAGC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATGCCAGC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATGCCAGC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/ATGCCAGC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.336 seconds.
+Reads Processed:    65317920 	1580.17k reads/sec
+Bases Processed:    19595376000 	474.05m bases/sec
+Reads Out:          347656
+Bases Out:          104296800
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAACTTCA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAACTTCA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAACTTCA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAACTTCA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAACTTCA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAACTTCA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               46.275 seconds.
+Reads Processed:    65317920 	1411.50k reads/sec
+Bases Processed:    19595376000 	423.45m bases/sec
+Reads Out:          754450
+Bases Out:          226335000
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAAGCCTG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAAGCCTG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAAGCCTG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAAGCCTG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAAGCCTG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAAGCCTG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.536 seconds.
+Reads Processed:    65317920 	1572.55k reads/sec
+Bases Processed:    19595376000 	471.77m bases/sec
+Reads Out:          951204
+Bases Out:          285361200
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CACAACGA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CACAACGA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CACAACGA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CACAACGA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CACAACGA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CACAACGA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.132 seconds.
+Reads Processed:    65317920 	1588.02k reads/sec
+Bases Processed:    19595376000 	476.41m bases/sec
+Reads Out:          1005648
+Bases Out:          301694400
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CACTCACT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CACTCACT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CACTCACT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CACTCACT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CACTCACT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CACTCACT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.565 seconds.
+Reads Processed:    65317920 	1571.45k reads/sec
+Bases Processed:    19595376000 	471.44m bases/sec
+Reads Out:          1412212
+Bases Out:          423663600
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAGCGGCA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAGCGGCA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAGCGGCA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAGCGGCA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAGCGGCA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CAGCGGCA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.101 seconds.
+Reads Processed:    65317920 	1628.85k reads/sec
+Bases Processed:    19595376000 	488.65m bases/sec
+Reads Out:          521730
+Bases Out:          156519000
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CATCGCTA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CATCGCTA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CATCGCTA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CATCGCTA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CATCGCTA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CATCGCTA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               46.135 seconds.
+Reads Processed:    65317920 	1415.79k reads/sec
+Bases Processed:    19595376000 	424.74m bases/sec
+Reads Out:          154290
+Bases Out:          46287000
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCACGCAA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCACGCAA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCACGCAA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCACGCAA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCACGCAA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCACGCAA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.690 seconds.
+Reads Processed:    65317920 	1566.75k reads/sec
+Bases Processed:    19595376000 	470.02m bases/sec
+Reads Out:          689888
+Bases Out:          206966400
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCCAGGCA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCCAGGCA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCCAGGCA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCCAGGCA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCCAGGCA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCCAGGCA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.048 seconds.
+Reads Processed:    65317920 	1591.25k reads/sec
+Bases Processed:    19595376000 	477.37m bases/sec
+Reads Out:          707352
+Bases Out:          212205600
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCCGTTTC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCCGTTTC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCCGTTTC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCCGTTTC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCCGTTTC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCCGTTTC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.723 seconds.
+Reads Processed:    65317920 	1603.96k reads/sec
+Bases Processed:    19595376000 	481.19m bases/sec
+Reads Out:          798110
+Bases Out:          239433000
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCGACAAA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCGACAAA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCGACAAA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCGACAAA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCGACAAA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCGACAAA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               39.386 seconds.
+Reads Processed:    65317920 	1658.39k reads/sec
+Bases Processed:    19595376000 	497.52m bases/sec
+Reads Out:          151902
+Bases Out:          45570600
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCGCACCG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCGCACCG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCGCACCG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCGCACCG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCGCACCG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCGCACCG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.287 seconds.
+Reads Processed:    65317920 	1582.03k reads/sec
+Bases Processed:    19595376000 	474.61m bases/sec
+Reads Out:          597158
+Bases Out:          179147400
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCTTTGAT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCTTTGAT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCTTTGAT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCTTTGAT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCTTTGAT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CCTTTGAT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.985 seconds.
+Reads Processed:    65317920 	1593.69k reads/sec
+Bases Processed:    19595376000 	478.11m bases/sec
+Reads Out:          436870
+Bases Out:          131061000
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGAATATT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGAATATT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGAATATT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGAATATT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGAATATT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGAATATT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.546 seconds.
+Reads Processed:    65317920 	1572.17k reads/sec
+Bases Processed:    19595376000 	471.65m bases/sec
+Reads Out:          706702
+Bases Out:          212010600
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGACATTC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGACATTC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGACATTC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGACATTC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGACATTC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGACATTC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               38.904 seconds.
+Reads Processed:    65317920 	1678.96k reads/sec
+Bases Processed:    19595376000 	503.69m bases/sec
+Reads Out:          120666
+Bases Out:          36199800
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGATGGTG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGATGGTG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGATGGTG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGATGGTG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGATGGTG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGATGGTG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.257 seconds.
+Reads Processed:    65317920 	1583.20k reads/sec
+Bases Processed:    19595376000 	474.96m bases/sec
+Reads Out:          907264
+Bases Out:          272179200
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGCCAAGG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGCCAAGG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGCCAAGG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGCCAAGG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGCCAAGG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGCCAAGG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               39.860 seconds.
+Reads Processed:    65317920 	1638.69k reads/sec
+Bases Processed:    19595376000 	491.61m bases/sec
+Reads Out:          332930
+Bases Out:          99879000
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGGAGTGC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGGAGTGC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGGAGTGC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGGAGTGC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGGAGTGC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGGAGTGC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               38.821 seconds.
+Reads Processed:    65317920 	1682.56k reads/sec
+Bases Processed:    19595376000 	504.77m bases/sec
+Reads Out:          41418
+Bases Out:          12425400
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGTCCCAC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGTCCCAC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGTCCCAC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGTCCCAC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGTCCCAC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CGTCCCAC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.167 seconds.
+Reads Processed:    65317920 	1586.65k reads/sec
+Bases Processed:    19595376000 	475.99m bases/sec
+Reads Out:          1011344
+Bases Out:          303403200
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTACCGAT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTACCGAT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTACCGAT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTACCGAT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTACCGAT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTACCGAT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               45.225 seconds.
+Reads Processed:    65317920 	1444.28k reads/sec
+Bases Processed:    19595376000 	433.28m bases/sec
+Reads Out:          727934
+Bases Out:          218380200
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTAGAATC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTAGAATC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTAGAATC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTAGAATC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTAGAATC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTAGAATC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               38.983 seconds.
+Reads Processed:    65317920 	1675.56k reads/sec
+Bases Processed:    19595376000 	502.67m bases/sec
+Reads Out:          47590
+Bases Out:          14277000
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTCATTGG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTCATTGG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTCATTGG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTCATTGG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTCATTGG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTCATTGG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.106 seconds.
+Reads Processed:    65317920 	1589.00k reads/sec
+Bases Processed:    19595376000 	476.70m bases/sec
+Reads Out:          598352
+Bases Out:          179505600
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTGTTAGT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTGTTAGT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTGTTAGT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTGTTAGT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTGTTAGT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTGTTAGT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.656 seconds.
+Reads Processed:    65317920 	1606.59k reads/sec
+Bases Processed:    19595376000 	481.98m bases/sec
+Reads Out:          520186
+Bases Out:          156055800
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTTCAGCT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTTCAGCT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTTCAGCT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTTCAGCT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTTCAGCT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTTCAGCT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.115 seconds.
+Reads Processed:    65317920 	1588.66k reads/sec
+Bases Processed:    19595376000 	476.60m bases/sec
+Reads Out:          816692
+Bases Out:          245007600
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTTGCTTG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTTGCTTG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTTGCTTG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTTGCTTG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTTGCTTG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/CTTGCTTG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.859 seconds.
+Reads Processed:    65317920 	1560.43k reads/sec
+Bases Processed:    19595376000 	468.13m bases/sec
+Reads Out:          922518
+Bases Out:          276755400
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAAACTGG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAAACTGG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAAACTGG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAAACTGG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAAACTGG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAAACTGG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.377 seconds.
+Reads Processed:    65317920 	1617.69k reads/sec
+Bases Processed:    19595376000 	485.31m bases/sec
+Reads Out:          551134
+Bases Out:          165340200
+java -ea -Xmx447504m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GACATCAT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GACATCAT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GACATCAT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GACATCAT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GACATCAT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GACATCAT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               42.018 seconds.
+Reads Processed:    65317920 	1554.54k reads/sec
+Bases Processed:    19595376000 	466.36m bases/sec
+Reads Out:          998678
+Bases Out:          299603400
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAGCACAG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAGCACAG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAGCACAG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAGCACAG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAGCACAG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAGCACAG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               38.807 seconds.
+Reads Processed:    65317920 	1683.15k reads/sec
+Bases Processed:    19595376000 	504.94m bases/sec
+Reads Out:          81224
+Bases Out:          24367200
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAGTTTGA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAGTTTGA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAGTTTGA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAGTTTGA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAGTTTGA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GAGTTTGA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.228 seconds.
+Reads Processed:    65317920 	1584.32k reads/sec
+Bases Processed:    19595376000 	475.30m bases/sec
+Reads Out:          570624
+Bases Out:          171187200
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GATTGAAG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GATTGAAG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GATTGAAG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GATTGAAG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GATTGAAG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GATTGAAG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.748 seconds.
+Reads Processed:    65317920 	1564.59k reads/sec
+Bases Processed:    19595376000 	469.38m bases/sec
+Reads Out:          999184
+Bases Out:          299755200
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCAAGATA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCAAGATA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCAAGATA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCAAGATA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCAAGATA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCAAGATA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.803 seconds.
+Reads Processed:    65317920 	1600.81k reads/sec
+Bases Processed:    19595376000 	480.24m bases/sec
+Reads Out:          865690
+Bases Out:          259707000
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCAATGGA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCAATGGA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCAATGGA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCAATGGA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCAATGGA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCAATGGA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               39.757 seconds.
+Reads Processed:    65317920 	1642.93k reads/sec
+Bases Processed:    19595376000 	492.88m bases/sec
+Reads Out:          339670
+Bases Out:          101901000
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCCTGTTC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCCTGTTC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCCTGTTC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCCTGTTC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCCTGTTC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCCTGTTC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               39.384 seconds.
+Reads Processed:    65317920 	1658.50k reads/sec
+Bases Processed:    19595376000 	497.55m bases/sec
+Reads Out:          516232
+Bases Out:          154869600
+java -ea -Xmx447505m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCGTAGGA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCGTAGGA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCGTAGGA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCGTAGGA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCGTAGGA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCGTAGGA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               44.214 seconds.
+Reads Processed:    65317920 	1477.33k reads/sec
+Bases Processed:    19595376000 	443.20m bases/sec
+Reads Out:          88618
+Bases Out:          26585400
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCTGCCGC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCTGCCGC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCTGCCGC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCTGCCGC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCTGCCGC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GCTGCCGC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               39.767 seconds.
+Reads Processed:    65317920 	1642.53k reads/sec
+Bases Processed:    19595376000 	492.76m bases/sec
+Reads Out:          337794
+Bases Out:          101338200
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGAGGCTG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGAGGCTG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGAGGCTG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGAGGCTG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGAGGCTG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGAGGCTG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               39.735 seconds.
+Reads Processed:    65317920 	1643.85k reads/sec
+Bases Processed:    19595376000 	493.15m bases/sec
+Reads Out:          493744
+Bases Out:          148123200
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGCCTCGC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGCCTCGC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGCCTCGC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGCCTCGC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGCCTCGC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGCCTCGC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.930 seconds.
+Reads Processed:    65317920 	1595.85k reads/sec
+Bases Processed:    19595376000 	478.76m bases/sec
+Reads Out:          829716
+Bases Out:          248914800
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGCGGGAA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGCGGGAA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGCGGGAA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGCGGGAA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGCGGGAA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGCGGGAA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               45.748 seconds.
+Reads Processed:    65317920 	1427.79k reads/sec
+Bases Processed:    19595376000 	428.34m bases/sec
+Reads Out:          473924
+Bases Out:          142177200
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGGCGAAA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGGCGAAA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGGCGAAA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGGCGAAA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGGCGAAA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGGCGAAA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               45.015 seconds.
+Reads Processed:    65317920 	1451.02k reads/sec
+Bases Processed:    19595376000 	435.30m bases/sec
+Reads Out:          212638
+Bases Out:          63791400
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGTAATGA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGTAATGA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGTAATGA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGTAATGA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGTAATGA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGTAATGA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               46.405 seconds.
+Reads Processed:    65317920 	1407.55k reads/sec
+Bases Processed:    19595376000 	422.26m bases/sec
+Reads Out:          378026
+Bases Out:          113407800
+java -ea -Xmx447503m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGTGTACC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGTGTACC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGTGTACC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGTGTACC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGTGTACC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GGTGTACC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.195 seconds.
+Reads Processed:    65317920 	1625.03k reads/sec
+Bases Processed:    19595376000 	487.51m bases/sec
+Reads Out:          476022
+Bases Out:          142806600
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTACGTTG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTACGTTG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTACGTTG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTACGTTG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTACGTTG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTACGTTG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               48.161 seconds.
+Reads Processed:    65317920 	1356.25k reads/sec
+Bases Processed:    19595376000 	406.88m bases/sec
+Reads Out:          801746
+Bases Out:          240523800
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTAGTCGA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTAGTCGA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTAGTCGA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTAGTCGA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTAGTCGA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTAGTCGA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.934 seconds.
+Reads Processed:    65317920 	1595.71k reads/sec
+Bases Processed:    19595376000 	478.71m bases/sec
+Reads Out:          390792
+Bases Out:          117237600
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTCACGGG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTCACGGG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTCACGGG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTCACGGG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTCACGGG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTCACGGG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.181 seconds.
+Reads Processed:    65317920 	1586.11k reads/sec
+Bases Processed:    19595376000 	475.83m bases/sec
+Reads Out:          948772
+Bases Out:          284631600
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTCTAACG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTCTAACG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTCTAACG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTCTAACG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTCTAACG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTCTAACG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.420 seconds.
+Reads Processed:    65317920 	1576.95k reads/sec
+Bases Processed:    19595376000 	473.09m bases/sec
+Reads Out:          791540
+Bases Out:          237462000
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTGCTGAT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTGCTGAT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTGCTGAT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTGCTGAT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTGCTGAT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTGCTGAT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.813 seconds.
+Reads Processed:    65317920 	1562.13k reads/sec
+Bases Processed:    19595376000 	468.64m bases/sec
+Reads Out:          960982
+Bases Out:          288294600
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTGGATAG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTGGATAG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTGGATAG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTGGATAG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTGGATAG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTGGATAG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               49.587 seconds.
+Reads Processed:    65317920 	1317.25k reads/sec
+Bases Processed:    19595376000 	395.17m bases/sec
+Reads Out:          1147494
+Bases Out:          344248200
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTTCGCAG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTTCGCAG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTTCGCAG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTTCGCAG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTTCGCAG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/GTTCGCAG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.228 seconds.
+Reads Processed:    65317920 	1584.31k reads/sec
+Bases Processed:    19595376000 	475.29m bases/sec
+Reads Out:          496140
+Bases Out:          148842000
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TAAGGGAG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TAAGGGAG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TAAGGGAG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TAAGGGAG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TAAGGGAG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TAAGGGAG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               45.406 seconds.
+Reads Processed:    65317920 	1438.54k reads/sec
+Bases Processed:    19595376000 	431.56m bases/sec
+Reads Out:          184982
+Bases Out:          55494600
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TACGATAC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TACGATAC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TACGATAC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TACGATAC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TACGATAC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TACGATAC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.198 seconds.
+Reads Processed:    65317920 	1624.91k reads/sec
+Bases Processed:    19595376000 	487.47m bases/sec
+Reads Out:          584744
+Bases Out:          175423200
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TAGAGCCA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TAGAGCCA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TAGAGCCA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TAGAGCCA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TAGAGCCA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TAGAGCCA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               39.232 seconds.
+Reads Processed:    65317920 	1664.91k reads/sec
+Bases Processed:    19595376000 	499.47m bases/sec
+Reads Out:          53428
+Bases Out:          16028400
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TATCAATC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TATCAATC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TATCAATC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TATCAATC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TATCAATC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TATCAATC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.109 seconds.
+Reads Processed:    65317920 	1588.91k reads/sec
+Bases Processed:    19595376000 	476.67m bases/sec
+Reads Out:          859212
+Bases Out:          257763600
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TATTCTGT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TATTCTGT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TATTCTGT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TATTCTGT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TATTCTGT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TATTCTGT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               42.322 seconds.
+Reads Processed:    65317920 	1543.34k reads/sec
+Bases Processed:    19595376000 	463.00m bases/sec
+Reads Out:          1001794
+Bases Out:          300538200
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCAAAGCT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCAAAGCT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCAAAGCT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCAAAGCT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCAAAGCT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCAAAGCT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.522 seconds.
+Reads Processed:    65317920 	1573.10k reads/sec
+Bases Processed:    19595376000 	471.93m bases/sec
+Reads Out:          535406
+Bases Out:          160621800
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCATTAAG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCATTAAG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCATTAAG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCATTAAG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCATTAAG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCATTAAG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               39.948 seconds.
+Reads Processed:    65317920 	1635.08k reads/sec
+Bases Processed:    19595376000 	490.53m bases/sec
+Reads Out:          447876
+Bases Out:          134362800
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCCCGATG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCCCGATG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCCCGATG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCCCGATG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCCCGATG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCCCGATG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.622 seconds.
+Reads Processed:    65317920 	1607.93k reads/sec
+Bases Processed:    19595376000 	482.38m bases/sec
+Reads Out:          473554
+Bases Out:          142066200
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCCGTGCG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCCGTGCG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCCGTGCG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCCGTGCG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCCGTGCG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCCGTGCG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               38.644 seconds.
+Reads Processed:    65317920 	1690.26k reads/sec
+Bases Processed:    19595376000 	507.08m bases/sec
+Reads Out:          21026
+Bases Out:          6307800
+java -ea -Xmx447507m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCGAACAC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCGAACAC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCGAACAC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCGAACAC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCGAACAC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCGAACAC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               39.886 seconds.
+Reads Processed:    65317920 	1637.62k reads/sec
+Bases Processed:    19595376000 	491.29m bases/sec
+Reads Out:          617834
+Bases Out:          185350200
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCGGCTCG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCGGCTCG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCGGCTCG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCGGCTCG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCGGCTCG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCGGCTCG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.180 seconds.
+Reads Processed:    65317920 	1586.16k reads/sec
+Bases Processed:    19595376000 	475.85m bases/sec
+Reads Out:          753868
+Bases Out:          226160400
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCTAGTCG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCTAGTCG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCTAGTCG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCTAGTCG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCTAGTCG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCTAGTCG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               42.344 seconds.
+Reads Processed:    65317920 	1542.55k reads/sec
+Bases Processed:    19595376000 	462.77m bases/sec
+Reads Out:          1073748
+Bases Out:          322124400
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCTGTATG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCTGTATG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCTGTATG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCTGTATG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCTGTATG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TCTGTATG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               42.848 seconds.
+Reads Processed:    65317920 	1524.42k reads/sec
+Bases Processed:    19595376000 	457.33m bases/sec
+Reads Out:          1169102
+Bases Out:          350730600
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGACTTAG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGACTTAG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGACTTAG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGACTTAG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGACTTAG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGACTTAG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               39.492 seconds.
+Reads Processed:    65317920 	1653.96k reads/sec
+Bases Processed:    19595376000 	496.19m bases/sec
+Reads Out:          195328
+Bases Out:          58598400
+java -ea -Xmx447510m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGATAATA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGATAATA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGATAATA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGATAATA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGATAATA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGATAATA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.347 seconds.
+Reads Processed:    65317920 	1579.74k reads/sec
+Bases Processed:    19595376000 	473.92m bases/sec
+Reads Out:          862002
+Bases Out:          258600600
+java -ea -Xmx447510m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGCACCCG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGCACCCG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGCACCCG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGCACCCG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGCACCCG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGCACCCG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.553 seconds.
+Reads Processed:    65317920 	1571.92k reads/sec
+Bases Processed:    19595376000 	471.58m bases/sec
+Reads Out:          777818
+Bases Out:          233345400
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGGGACCT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGGGACCT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGGGACCT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGGGACCT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGGGACCT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGGGACCT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               41.294 seconds.
+Reads Processed:    65317920 	1581.78k reads/sec
+Bases Processed:    19595376000 	474.53m bases/sec
+Reads Out:          814710
+Bases Out:          244413000
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGTTTCCC.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGTTTCCC.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGTTTCCC.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGTTTCCC.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGTTTCCC.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TGTTTCCC.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               47.573 seconds.
+Reads Processed:    65317920 	1373.00k reads/sec
+Bases Processed:    19595376000 	411.90m bases/sec
+Reads Out:          905814
+Bases Out:          271744200
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTACTATA.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTACTATA.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTACTATA.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTACTATA.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTACTATA.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTACTATA.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               42.575 seconds.
+Reads Processed:    65317920 	1534.18k reads/sec
+Bases Processed:    19595376000 	460.26m bases/sec
+Reads Out:          1013190
+Bases Out:          303957000
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTATCCTT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTATCCTT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTATCCTT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTATCCTT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTATCCTT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTATCCTT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               40.747 seconds.
+Reads Processed:    65317920 	1603.00k reads/sec
+Bases Processed:    19595376000 	480.90m bases/sec
+Reads Out:          902236
+Bases Out:          270670800
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTCCAGAT.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTCCAGAT.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTCCAGAT.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTCCAGAT.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTCCAGAT.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTCCAGAT.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               39.413 seconds.
+Reads Processed:    65317920 	1657.27k reads/sec
+Bases Processed:    19595376000 	497.18m bases/sec
+Reads Out:          265240
+Bases Out:          79572000
+java -ea -Xmx447509m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTGTGGCG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTGTGGCG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTGTGGCG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTGTGGCG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTGTGGCG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTGTGGCG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               38.838 seconds.
+Reads Processed:    65317920 	1681.80k reads/sec
+Bases Processed:    19595376000 	504.54m bases/sec
+Reads Out:          61112
+Bases Out:          18333600
+java -ea -Xmx447508m -cp /home-3/karoraw1@jhu.edu/.local/bbmap/current/ driver.FilterReadsByName in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTTAACTG.headers.R1.fastq out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTTAACTG.headers.R2.fastq names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTTAACTG.headers include=t
+Executing driver.FilterReadsByName [in=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R1_001.fastq, in2=/data/sprehei1/Raw_data_group/esakows1_132789/Undetermined_S0_L001_R2_001.fastq, out=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTTAACTG.headers.R1.fastq, out2=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTTAACTG.headers.R2.fastq, names=/home-3/karoraw1@jhu.edu/scratch/16S_Libraries/esakows1_132789/Demux/TTTAACTG.headers, include=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Time:               46.834 seconds.
+Reads Processed:    65317920 	1394.66k reads/sec
+Bases Processed:    19595376000 	418.40m bases/sec
+Reads Out:          587606
+Bases Out:          176281800

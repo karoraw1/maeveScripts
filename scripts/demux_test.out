@@ -1,0 +1,583 @@
+Parsing Index File
+Sun Dec 31 18:50:16 EST 2017
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       601G       408G       172K        51M       592G
+-/+ buffers/cache:       9.3G       1.0T 
+Swap:          15G       5.6M        15G 
+AAACAAGA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       603G       406G       172K        51M       593G
+-/+ buffers/cache:       9.5G       1.0T 
+Swap:          15G       5.6M        15G 
+Sun Dec 31 18:50:43 EST 2017
+AAATCATT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       628G       380G       172K        52M       619G
+-/+ buffers/cache:       9.3G       1.0T 
+Swap:          15G       5.6M        15G 
+Sun Dec 31 18:54:27 EST 2017
+AAATTGGA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       629G       380G       172K        52M       619G
+-/+ buffers/cache:       9.3G       1.0T 
+Swap:          15G       5.6M        15G 
+Sun Dec 31 18:55:14 EST 2017
+AACAGTAT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       629G       380G       172K        52M       620G
+-/+ buffers/cache:       9.4G       1.0T 
+Swap:          15G       5.6M        15G 
+Sun Dec 31 18:55:57 EST 2017
+AACCCGTT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       630G       379G       172K        52M       620G
+-/+ buffers/cache:       9.5G       1.0T 
+Swap:          15G       5.6M        15G 
+Sun Dec 31 18:56:41 EST 2017
+AAGGAACG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       630G       378G       172K        52M       621G
+-/+ buffers/cache:       9.5G       1.0T 
+Swap:          15G       5.6M        15G 
+Sun Dec 31 18:57:24 EST 2017
+AATACAGG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       631G       378G       172K        52M       622G
+-/+ buffers/cache:       9.6G       1.0T 
+Swap:          15G       5.6M        15G 
+Sun Dec 31 18:58:10 EST 2017
+AATGTCAA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       631G       377G       172K        52M       622G
+-/+ buffers/cache:       9.7G       1.0T 
+Swap:          15G       5.6M        15G 
+Sun Dec 31 18:58:49 EST 2017
+ACAAACTA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       632G       377G       172K        52M       622G
+-/+ buffers/cache:       9.7G       1.0T 
+Swap:          15G       5.6M        15G 
+Sun Dec 31 18:59:32 EST 2017
+ACACCTCG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       633G       376G       172K        52M       623G
+-/+ buffers/cache:       9.8G       1.0T 
+Swap:          15G       5.6M        15G 
+Sun Dec 31 19:00:15 EST 2017
+ACCATACT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       633G       376G       172K        52M       623G
+-/+ buffers/cache:       9.8G       1.0T 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:00:54 EST 2017
+ACCTCCCA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       633G       376G       172K        67M       623G
+-/+ buffers/cache:       9.9G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:01:38 EST 2017
+ACGGGCTG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       634G       375G       172K       182M       624G
+-/+ buffers/cache:         9G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:02:21 EST 2017
+ACTAAGAT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       634G       375G       172K       182M       624G
+-/+ buffers/cache:         9G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:03:00 EST 2017
+ACTTATTG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       635G       374G       172K       182M       624G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:03:42 EST 2017
+AGAGAGGC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       635G       374G       172K       182M       625G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:04:23 EST 2017
+AGCTGACG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       636G       373G       172K       182M       625G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:05:05 EST 2017
+AGGCTTCA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       636G       373G       172K       182M       626G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:05:53 EST 2017
+AGGTCGGT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       637G       372G       172K       182M       626G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:06:36 EST 2017
+AGTAGATG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       637G       372G       172K       182M       626G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:07:15 EST 2017
+AGTATGCA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       637G       372G       172K       182M       627G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:07:57 EST 2017
+AGTCACCC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       638G       371G       172K       182M       627G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:08:40 EST 2017
+ATAGGTGG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       638G       371G       172K       182M       627G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:09:19 EST 2017
+ATCGCACC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       638G       371G       172K       182M       628G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:10:11 EST 2017
+ATGAAGTA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       639G       370G       172K       182M       628G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:10:58 EST 2017
+ATGCCAGC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       639G       370G       172K       183M       628G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:11:45 EST 2017
+CAACTTCA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       639G       370G       172K       183M       628G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:12:27 EST 2017
+CAAGCCTG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       640G       369G       172K       183M       629G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:13:15 EST 2017
+CACAACGA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       640G       369G       172K       183M       629G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:13:58 EST 2017
+CACTCACT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       641G       368G       172K       183M       630G
+-/+ buffers/cache:        10G       999G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:14:41 EST 2017
+CAGCGGCA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       642G       367G       172K       183M       631G
+-/+ buffers/cache:        10G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:15:24 EST 2017
+CATCGCTA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       642G       366G       172K       183M       631G
+-/+ buffers/cache:        10G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:16:06 EST 2017
+CCACGCAA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       643G       366G       172K       183M       631G
+-/+ buffers/cache:        10G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:16:53 EST 2017
+CCCAGGCA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       643G       366G       172K       183M       632G
+-/+ buffers/cache:        10G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:17:37 EST 2017
+CCCGTTTC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       644G       365G       172K       183M       632G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:18:19 EST 2017
+CCGACAAA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       644G       365G       172K       183M       633G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:19:02 EST 2017
+CCGCACCG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       644G       365G       172K       183M       633G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:19:42 EST 2017
+CCTTTGAT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       645G       364G       172K       183M       633G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:20:25 EST 2017
+CGAATATT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       645G       364G       172K       183M       634G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:21:08 EST 2017
+CGACATTC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       645G       363G       172K       183M       634G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:21:51 EST 2017
+CGATGGTG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       646G       363G       172K       183M       634G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:22:30 EST 2017
+CGCCAAGG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       646G       363G       172K       183M       635G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:23:14 EST 2017
+CGGAGTGC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       646G       362G       172K       183M       635G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:23:55 EST 2017
+CGTCCCAC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       646G       362G       172K       183M       635G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:24:34 EST 2017
+CTACCGAT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       647G       362G       172K       183M       636G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:25:17 EST 2017
+CTAGAATC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       648G       361G       172K       183M       636G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:26:04 EST 2017
+CTCATTGG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       648G       361G       172K       183M       636G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:26:43 EST 2017
+CTGTTAGT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       648G       361G       172K       183M       636G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:27:26 EST 2017
+CTTCAGCT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       649G       360G       172K       183M       637G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:28:08 EST 2017
+CTTGCTTG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       649G       360G       172K       184M       637G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:28:51 EST 2017
+GAAACTGG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       650G       359G       172K       184M       638G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:29:35 EST 2017
+GACATCAT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       650G       359G       172K       184M       638G
+-/+ buffers/cache:        11G       998G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:30:17 EST 2017
+GAGCACAG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       651G       358G       172K       184M       639G
+-/+ buffers/cache:        11G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:31:00 EST 2017
+GAGTTTGA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       651G       358G       172K       184M       639G
+-/+ buffers/cache:        11G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:31:40 EST 2017
+GATTGAAG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       651G       357G       172K       184M       639G
+-/+ buffers/cache:        11G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:32:23 EST 2017
+GCAAGATA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       652G       357G       172K       184M       640G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:33:06 EST 2017
+GCAATGGA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       653G       356G       172K       184M       640G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:33:48 EST 2017
+GCCTGTTC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       653G       356G       172K       184M       641G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:34:29 EST 2017
+GCGTAGGA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       653G       355G       172K       184M       641G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:35:10 EST 2017
+GCTGCCGC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       653G       355G       172K       184M       641G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:35:55 EST 2017
+GGAGGCTG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       654G       355G       172K       184M       641G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:36:35 EST 2017
+GGCCTCGC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       654G       355G       172K       184M       642G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:37:16 EST 2017
+GGCGGGAA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       655G       354G       172K       184M       642G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:37:59 EST 2017
+GGGCGAAA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       655G       354G       172K       184M       642G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:38:46 EST 2017
+GGTAATGA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       655G       354G       172K       184M       643G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:39:32 EST 2017
+GGTGTACC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       655G       353G       172K       184M       643G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:40:20 EST 2017
+GTACGTTG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       656G       353G       172K       184M       643G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:41:01 EST 2017
+GTAGTCGA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       656G       353G       172K       184M       644G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:41:51 EST 2017
+GTCACGGG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       657G       352G       172K       184M       644G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:42:33 EST 2017
+GTCTAACG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       657G       352G       172K       184M       644G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:43:16 EST 2017
+GTGCTGAT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       658G       351G       172K       184M       645G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:43:59 EST 2017
+GTGGATAG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       659G       350G       172K       184M       646G
+-/+ buffers/cache:        12G       997G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:44:42 EST 2017
+GTTCGCAG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       659G       349G       172K       185M       646G
+-/+ buffers/cache:        12G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:45:33 EST 2017
+TAAGGGAG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       660G       349G       172K       185M       647G
+-/+ buffers/cache:        12G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:46:16 EST 2017
+TACGATAC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       660G       349G       172K       185M       647G
+-/+ buffers/cache:        12G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:47:02 EST 2017
+TAGAGCCA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       660G       349G       172K       185M       647G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:47:44 EST 2017
+TATCAATC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       660G       348G       172K       185M       647G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:48:23 EST 2017
+TATTCTGT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       661G       348G       172K       185M       648G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:49:06 EST 2017
+TCAAAGCT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       662G       347G       172K       185M       648G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:49:50 EST 2017
+TCATTAAG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       662G       347G       172K       185M       649G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:50:33 EST 2017
+TCCCGATG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       662G       346G       172K       185M       649G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:51:14 EST 2017
+TCCGTGCG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       663G       346G       172K       185M       649G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:51:56 EST 2017
+TCGAACAC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       663G       346G       172K       185M       649G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:52:35 EST 2017
+TCGGCTCG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       663G       346G       172K       185M       650G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:53:17 EST 2017
+TCTAGTCG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       664G       345G       172K       185M       650G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:54:00 EST 2017
+TCTGTATG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       665G       344G       172K       185M       651G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:54:44 EST 2017
+TGACTTAG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       665G       343G       172K       185M       652G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:55:28 EST 2017
+TGATAATA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       666G       343G       172K       185M       652G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:56:08 EST 2017
+TGCACCCG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       666G       343G       172K       185M       652G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:56:51 EST 2017
+TGGGACCT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       667G       342G       172K       185M       653G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:57:34 EST 2017
+TGTTTCCC.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       667G       342G       172K       185M       653G
+-/+ buffers/cache:        13G       996G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:58:17 EST 2017
+TTACTATA.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       668G       341G       172K       185M       654G
+-/+ buffers/cache:        13G       995G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:59:06 EST 2017
+TTATCCTT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       669G       340G       172K       185M       655G
+-/+ buffers/cache:        14G       995G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 19:59:50 EST 2017
+TTCCAGAT.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       669G       339G       172K       185M       655G
+-/+ buffers/cache:        14G       995G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 20:00:33 EST 2017
+TTGTGGCG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       670G       339G       172K       185M       655G
+-/+ buffers/cache:        14G       995G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 20:01:13 EST 2017
+TTTAACTG.headers
+             total       used       free     shared    buffers     cached
+Mem:          1.0T       670G       339G       172K       185M       655G
+-/+ buffers/cache:        14G       995G 
+Swap:          15G       4.9M        15G 
+Sun Dec 31 20:01:52 EST 2017
+Sun Dec 31 20:02:41 EST 2017
