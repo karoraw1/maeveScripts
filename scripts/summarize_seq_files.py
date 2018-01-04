@@ -3,15 +3,53 @@
 """
 Created on Thu Dec 14 19:25:38 2017
 
-@author: login
+This is the front end setup tool for a mostly DADA2 
+16S pipeline. Its purpose is to read in a mapping file
+containing sequence files in many different states of process
+and to create a custom shell script for each that can be 
+submitted to MARCC or AWS potentially allowing each file 
+or set of files to be processed in parallel.
+
+It uses a BBMap script for demultiplexing (`filterbyname.sh`)
+
+The first step is to read in a writable directory for the
+outputs and intermediate files. This can be provided on 
+the commanad line. 
+
+The second step is to read in a readable directory that contains
+multiple different folders for each sequencing run to analyze. 
+
+The third step is to read in the mapping file for each sequencing 
+run. 
+
+ - a prefix called the seqID which represents the sequencing 
+   run and is the name of the subfolder in which the sequence 
+   files are contained
+ - a paired or single end flag ("PE" or "SE")
+ - the name of the forward reads or the common suffix among 
+   all forward reads in the 
+ - the name of the reverse reads or the common suffix among
+   all the reverse reads
+ - the name of the index file if there is one
+ - a demultiplexing boolean flag ("T" or "F")
+ - the file path of a list of barcode sequences and sample names
+ - 
+
+
+@author: Keith Arora-Williams
 """
 
 import copy
 import pandas as pd
 import numpy as np
 import os
+import sys
+from Bio.Seq import Seq
 
 write_directory="/home-3/karoraw1@jhu.edu/scratch/16S_Libraries"
+
+def rev_comp_col(a_string):
+    return str(Seq(a_string).reverse_complement())
 
 def convert_bytes(num):
     """
@@ -70,7 +108,7 @@ for idx, sht in enumerate(sheets):
     print "Sheet {} has {} cols/rows".format(sht, metadata_df.shape)
 
     # This section adds entries to the metadata df corresponding
-    # to resequenced files. 
+    # to resequenced files.
     resequences = metadata_df.Resequencingfiles.notnull()
     print "\tNumber of resequencing entries:", resequences.sum()
     if resequences.sum() > 0:
@@ -85,6 +123,7 @@ for idx, sht in enumerate(sheets):
         entries_to_duplicate.ix[:, "sequencingfileforwardname"] = empty_filler
         entries_to_duplicate.ix[:, "datafoldername"] = empty_filler
         entries_to_duplicate.ix[:, "sequencingID"] = [reseq]*resequences.sum()
+        entries_to_duplicate.ix[:, '#SampleID'] = [i+"_RSQ" for i in entries_to_duplicate.ix[:, '#SampleID'].tolist()]
         metadata_df = metadata_df.append(entries_to_duplicate, ignore_index=True)
 
     if idx == 0:
@@ -92,14 +131,18 @@ for idx, sht in enumerate(sheets):
     else:
         super_map = super_map.append(metadata_df, ignore_index=True)
         
-print "\nFull metadata df is: {}".format( super_map.shape )
+super_map.drop(["2ndstepbarcodesequence.1"], axis=1, inplace=True)
+
+sampleIDcheck = np.unique(super_map.ix[:, '#SampleID'].tolist())
+
+print "\nFull metadata df is: {} with {} unique sample names".format( super_map.shape, len(sampleIDcheck))
 
 seqIDs = super_map.sequencingID.unique()
 
 super_map.ix[:, "Demultiplexed"] = [False] * super_map.shape[0]
 super_map.ix[:, "DemuxFileRoot"] = [""] * super_map.shape[0]
 
-col_keys = ["Fwd", "Rev", "Idx", "Map"]
+col_keys = ["Fwd", "Rev", "Idx", "Map", "Barcodes"]
 demux_df = pd.DataFrame(index=seqIDs, columns=col_keys)
 
 for sID in seqIDs:
@@ -108,10 +151,11 @@ for sID in seqIDs:
         super_map.ix[sid_bool, "Demultiplexed"] = [ True ] * sid_bool.sum()
         super_map.ix[sid_bool, "DemuxFileRoot"] = [ i.split("R1")[0] for i in super_map.ix[sid_bool, "sequencingfileforwardname"].tolist() ] 
         super_map.ix[sid_bool, "sequencingfileindexname"] = [""] * sid_bool.sum()
-        super_map.ix[sid_bool, "sequencingfilereversename"] = [""] * sid_bool.sum() 
-        super_map.ix[sid_bool, "sequencingfileforwardname"] = [""] * sid_bool.sum()
+        super_map.ix[sid_bool, "sequencingfilereversename"] = ["R2_001.fastq"] * sid_bool.sum() 
+        super_map.ix[sid_bool, "sequencingfileforwardname"] = ["R1_001.fastq"] * sid_bool.sum()
     
     sid_subdf = super_map.ix[sid_bool, :]
+        
     files_n = [os.path.basename(i) for i in seqIDtoFileDict[sID]]
     maps_n = [i for i in files_n if ".txt" in i]
     seqs_n = [i for i in files_n if ".fast" in i]
@@ -121,21 +165,33 @@ for sID in seqIDs:
     sid_idx = sid_subdf.sequencingfileindexname.unique()[0]
     sid_map = sid_subdf.mappingfilename.unique()[0]
 
+    demuxed_bool = sid_subdf.Demultiplexed.unique()[0]
+    print "\nSequence ID: {}".format(sID)
+    print "\tDemultiplexed?: {}".format(demuxed_bool)
+
+    if not demuxed_bool:
+        bcode_file_name = "../data/" + sID + "_barcodes.txt"
+        barcode_cols = set(['#SampleID', '2ndstepbarcodesequence'])
+        not_barcodes = set(list(super_map.columns)) - barcode_cols
+        barcode_data = sid_subdf.drop(list(not_barcodes), axis=1)
+        barcode_data.ix[:, "2ndstepbarcodesequence"] = barcode_data.ix[:, "2ndstepbarcodesequence"].apply(rev_comp_col)
+        barcode_data.to_csv(bcode_file_name, sep="\t", index=False, header=False)
+        print "\tBarcode File: {}".format(bcode_file_name)
+
     detectors = []
     candidates = [sid_fwd, sid_rev, sid_idx, sid_map]    
-    for idx, col_k, candi in zip(range(4), col_keys, candidates):
+    for idx, col_k, candi in zip(range(5), col_keys, candidates):
         if candi in seqs_n or candi in maps_n:
             detectors.append(True)
             this_file = [i for i in files_n if candi in i]
             assert len(this_file) == 1
             demux_df.ix[sID, col_k] = this_file[0]
+        elif col_k == "Barcodes" and not demuxed_bool:
+            demux_df.ix[sID, col_k] = bcode_file_name
         else:
             detectors.append(False)
             demux_df.ix[sID, col_k] = ""
-         
-    demuxed_bool = sid_subdf.Demultiplexed.unique()[0]
-    print "\nSequence ID: {}".format(sID)
-    print "\tDemultiplexed?: {}".format(demuxed_bool)
+
     print "Files Expected:"
     print "\t Fwd file: {} ( Exists: {})".format(sid_fwd, detectors[0])
     print "\t Rev file: {} ( Exists: {})".format(sid_rev, detectors[1])
@@ -155,3 +211,5 @@ for sID in seqIDs:
         demux_df.ix[sID, "Fwd"] = fwd_path
         demux_df.ix[sID, "Rev"] = rev_path
         demux_df.ix[sID, "Idx"] = idx_path
+
+demux_df.to_csv("../data/mapping_file.tsv", sep="\t")

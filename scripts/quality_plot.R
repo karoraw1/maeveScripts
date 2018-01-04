@@ -1,7 +1,7 @@
 library(dada2)
 args <- commandArgs(TRUE)
-base_path <- as.double(args[1])
-seq_ID <- as.double(args[2])
+base_path <- args[1]
+seq_ID <- args[2]
 
 # library(dada2)
 # base_path = "/home-3/karoraw1@jhu.edu/scratch/16S_Libraries"
@@ -21,6 +21,9 @@ file_sizes_r = sort(sapply(fnRs, file.size), decreasing = T, na.last = NA)
 to_plot_fwd=row.names(as.data.frame(file_sizes_f[1:2]))
 to_plot_rev=row.names(as.data.frame(file_sizes_r[1:2]))
 
+write("Two biggest files (in Kb) are:", stdout())
+write(file_sizes_f[1], stdout())
+write(file_sizes_f[2], stdout())
 
 png(filename=fwdPNGname)
 plotQualityProfile(to_plot_fwd)

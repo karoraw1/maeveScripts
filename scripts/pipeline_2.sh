@@ -32,17 +32,9 @@ REV_PATH=$RAW_BASE/$SEQ_ID/$RAW_REV
 DEMUX_DIR=$BASE_OUT/$SEQ_ID/Demux
 #mkdir -p $DEMUX_DIR
 
-# I need to get rid of the first `sed` command here because matching is failing
-
-echo "Parsing Index File"
-
-parallel -j 48 -a $BCODE "grep --no-group-separator -B1 {} $IDX_PATH | grep @M00776 | sed 's/@M00776/M00776/g' > $DEMUX_DIR/{}.headers"
-
-for header in `ls $DEMUX_DIR/*.headers`; do
-    echo $(basename $header)
-    filterbyname.sh in=$FWD_PATH in2=$REV_PATH out=$header.R1.fastq out2=$header.R2.fastq names=$header include=t;
-done
-
+vsearch --fastq_truncee --fastq_mergepairs  --reverse fastqfile (--fastaout | --fastqout | --fastaout_notmerged_fwd
+| --fastaout_notmerged_rev|--fastqout_notmerged_fwd | --fastqout_notmerged_rev |
+--eetabbedout) outputfile [options] --threads 48
 
 ## combine paired end reads
 #mkdir Flash_Files
