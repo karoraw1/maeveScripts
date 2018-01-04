@@ -3,38 +3,10 @@
 """
 Created on Thu Dec 14 19:25:38 2017
 
-This is the front end setup tool for a mostly DADA2 
-16S pipeline. Its purpose is to read in a mapping file
-containing sequence files in many different states of process
-and to create a custom shell script for each that can be 
-submitted to MARCC or AWS potentially allowing each file 
-or set of files to be processed in parallel.
-
-It uses a BBMap script for demultiplexing (`filterbyname.sh`)
-
-The first step is to read in a writable directory for the
-outputs and intermediate files. This can be provided on 
-the commanad line. 
-
-The second step is to read in a readable directory that contains
-multiple different folders for each sequencing run to analyze. 
-
-The third step is to read in the mapping file for each sequencing 
-run. 
-
- - a prefix called the seqID which represents the sequencing 
-   run and is the name of the subfolder in which the sequence 
-   files are contained
- - a paired or single end flag ("PE" or "SE")
- - the name of the forward reads or the common suffix among 
-   all forward reads in the 
- - the name of the reverse reads or the common suffix among
-   all the reverse reads
- - the name of the index file if there is one
- - a demultiplexing boolean flag ("T" or "F")
- - the file path of a list of barcode sequences and sample names
- - 
-
+This is a script specifically designed to parse
+the sample processing sheet Excel file used by
+our lab. It creates the files needed for the 
+general purpose pipeline.
 
 @author: Keith Arora-Williams
 """
@@ -142,7 +114,7 @@ seqIDs = super_map.sequencingID.unique()
 super_map.ix[:, "Demultiplexed"] = [False] * super_map.shape[0]
 super_map.ix[:, "DemuxFileRoot"] = [""] * super_map.shape[0]
 
-col_keys = ["Fwd", "Rev", "Idx", "Map", "Barcodes"]
+col_keys = ["Fwd", "Rev", "Idx", "Map", "Barcodes", "Demuxed", "ReadTypes"]
 demux_df = pd.DataFrame(index=seqIDs, columns=col_keys)
 
 for sID in seqIDs:
@@ -160,10 +132,16 @@ for sID in seqIDs:
     maps_n = [i for i in files_n if ".txt" in i]
     seqs_n = [i for i in files_n if ".fast" in i]
 
-    sid_fwd = sid_subdf.sequencingfileforwardname.unique()[0]
-    sid_rev = sid_subdf.sequencingfilereversename.unique()[0]
-    sid_idx = sid_subdf.sequencingfileindexname.unique()[0]
-    sid_map = sid_subdf.mappingfilename.unique()[0]
+    if sID != 'Miseq_data_SarahPreheim_Sept2016':
+        sid_fwd = sid_subdf.sequencingfileforwardname.unique()[0]
+        sid_rev = sid_subdf.sequencingfilereversename.unique()[0]
+        sid_idx = sid_subdf.sequencingfileindexname.unique()[0]
+        sid_map = sid_subdf.mappingfilename.unique()[0]
+    else:
+        sid_fwd = "*R1_001.fastq"
+        sid_rev = "*R2_001.fastq"
+        sid_idx = ""
+        sid_map = ""
 
     demuxed_bool = sid_subdf.Demultiplexed.unique()[0]
     print "\nSequence ID: {}".format(sID)
@@ -179,8 +157,8 @@ for sID in seqIDs:
         print "\tBarcode File: {}".format(bcode_file_name)
 
     detectors = []
-    candidates = [sid_fwd, sid_rev, sid_idx, sid_map]    
-    for idx, col_k, candi in zip(range(5), col_keys, candidates):
+    candidates = [sid_fwd, sid_rev, sid_idx, sid_map, bcode_file_name, demuxed_bool, "PE"]    
+    for idx, col_k, candi in zip(range(7), col_keys, candidates):
         if candi in seqs_n or candi in maps_n:
             detectors.append(True)
             this_file = [i for i in files_n if candi in i]
@@ -188,9 +166,13 @@ for sID in seqIDs:
             demux_df.ix[sID, col_k] = this_file[0]
         elif col_k == "Barcodes" and not demuxed_bool:
             demux_df.ix[sID, col_k] = bcode_file_name
+        elif col_k == "Demuxed":
+            demux_df.ix[sID, col_k] = candi
+        elif col_k == "ReadTypes":
+            demux_df.ix[sID, col_k] = candi
         else:
             detectors.append(False)
-            demux_df.ix[sID, col_k] = ""
+            demux_df.ix[sID, col_k] = candi
 
     print "Files Expected:"
     print "\t Fwd file: {} ( Exists: {})".format(sid_fwd, detectors[0])
