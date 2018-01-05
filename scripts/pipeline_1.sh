@@ -29,7 +29,7 @@ mkdir -p $DEMUX_DIR
 
 echo "Parsing Index File"
 
-parallel -j 48 -a $BCODE --colsep '\t' "grep --no-group-separator -B1 {2} $IDX_PATH | grep @M00776 | sed 's/@M00776/M00776/g' > $DEMUX_DIR/{1}.headers"
+parallel -j 48 -a $BCODE --colsep '\t' "grep --no-group-separator -B1 {2} $IDX_PATH | grep "^@" | sed 's/^@//g' > $DEMUX_DIR/{1}.headers"
 
 echo "Demultiplexing" 
 
@@ -41,5 +41,5 @@ for header in `ls $DEMUX_DIR/*.headers`; do
     filterbyname.sh in=$FWD_PATH in2=$REV_PATH out=$sample_path.R1.fastq out2=$sample_path.R2.fastq names=$header include=t;
 done
 
-Rscript scripts/quality_plot.R $BASE_OUT $SEQ_ID
+Rscript ^PWD^/quality_plot.R $BASE_OUT $SEQ_ID
 

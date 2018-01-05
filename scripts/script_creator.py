@@ -33,7 +33,7 @@ run.
  - the name of the index file if there is one
  - a demultiplexing boolean flag ("T" or "F")
  - the file path of a list of barcode sequences and sample names
- - 
+
 
 
 @author: Keith Arora-Williams
@@ -82,47 +82,21 @@ for this_arg, arg_t in zip(arg_list, arg_types):
     else:
         sys.exit("`{}` is an invalid path to a {}\n".format(this_arg, arg_t))
 
-
 meta_map_df = pd.read_csv(args.meta_map, sep="\t")
 
 # default designations
 seqIDs = meta_map_df.ix[:, meta_map_df.columns[0]].tolist()
 inPaths = [os.path.join(args.read_dir, i) for i in seqIDs]
 outPaths = [os.path.join(args.write_dir, i) for i in seqIDs]
-for i in outPaths:
-    print i
 map(safe_mkdir, outPaths)
 
 row_list = [meta_map_df.ix[idx, :].tolist() for idx in xrange(len(seqIDs))]
 packing_list = zip(outPaths, row_list, inPaths)
+script_list = map(write_demux_and_qual_assess, packing_list)
 
-
-
-#def write_demux_and_qual_assess(paths_and_row):
-#    base_out, row_entry, base_in  = paths_and_row
-#    sid, fwd, rev, idxF, map_, bcode, demux_bool, readType = row_entry
-#    OutScriptPath = os.path.join(base_out, sid+"_step1.sh")
-#    # not demuxed
-#    with open("pipeline_1.sh", "r") as p1_fh:
-#        p1_text = p1_fh.read().split("\n")
-#
-#    if not demux_bool:
-#        fwd_path = path_or_file(base_in, fwd, False)
-#        rev_path = path_or_file(base_in, rev, False)
-#        idx_path = path_or_file(base_in, idxF, False)
-#        bcode_path = path_or_file(base_path, bcode, False)
-#    else:
-#        fwd_path = path_or_file(base_in, fwd, True)
-#        rev_path = path_or_file(base_in, rev, True)
-#        del p1_text[29:42]
-#        del p1_text[5:8]
-#        p1_text[4] = p1_text[4].split("=")[0]+"=0:15:00"
-#        p1_text[-1] = p1_text[27]
-#        p1_text[26] = "ln $FWD_PATH $DEMUX_DIR"
-#        p1_text[27] = "ln $REV_PATH $DEMUX_DIR"
-#        
-#    rep_strs = ["^SID^","^F^","^R^","^I^","^B^", "^OP^"]
-#    
-#    return
+meta_script_path = os.path.join(args.write_dir, "meta_script.sh")
+with open(meta_script_path, "w") as msp_fh:
+    for sL in script_list:
+        msp_fh.write("sbatch " + sL + "\n")
 
 

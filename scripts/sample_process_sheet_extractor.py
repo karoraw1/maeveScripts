@@ -148,7 +148,7 @@ for sID in seqIDs:
     print "\tDemultiplexed?: {}".format(demuxed_bool)
 
     if not demuxed_bool:
-        bcode_file_name = "../data/" + sID + "_barcodes.txt"
+        bcode_file_name = os.path.abspath("../data/" + sID + "_barcodes.txt")
         barcode_cols = set(['#SampleID', '2ndstepbarcodesequence'])
         not_barcodes = set(list(super_map.columns)) - barcode_cols
         barcode_data = sid_subdf.drop(list(not_barcodes), axis=1)

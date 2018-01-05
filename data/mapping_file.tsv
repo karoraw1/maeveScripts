@@ -1,6 +1,6 @@
 	Fwd	Rev	Idx	Map	Barcodes	Demuxed	ReadTypes
-esakows1_132789	Undetermined_S0_L001_R1_001.fastq	Undetermined_S0_L001_R2_001.fastq	Undetermined_S0_L001_I1_001.fastq	esakows1_132789_mapping.txt	../data/esakows1_132789_barcodes.txt	False	PE
-Keith_Maeve1_138650	Undetermined_S0_L001_R1_001.fastq	Undetermined_S0_L001_R2_001.fastq	Undetermined_S0_L001_I1_001.fastq	TBD	../data/Keith_Maeve1_138650_barcodes.txt	False	PE
-Miseq_data_SarahPreheim_Sept2016	*R1_001.fastq	*R2_001.fastq			../data/Keith_Maeve1_138650_barcodes.txt	True	PE
-sprehei1_122704	A6448s_1_1_merged.fastq	A6448s_1_3_merged.fastq	A6448s_1_2_merged.fastq	BayBridge_mapping.txt2	../data/sprehei1_122704_barcodes.txt	False	PE
-sprehei1_123382	Undetermined_S0_L001_R1_001.fastq	Undetermined_S0_L001_R2_001.fastq	Undetermined_S0_L001_I1_001.fastq	BayBridge_mapping.txt2	../data/sprehei1_123382_barcodes.txt	False	PE
+esakows1_132789	Undetermined_S0_L001_R1_001.fastq	Undetermined_S0_L001_R2_001.fastq	Undetermined_S0_L001_I1_001.fastq	esakows1_132789_mapping.txt	/scratch/groups/sprehei1/Keith_Files/maeveScripts/data/esakows1_132789_barcodes.txt	False	PE
+Keith_Maeve1_138650	Undetermined_S0_L001_R1_001.fastq	Undetermined_S0_L001_R2_001.fastq	Undetermined_S0_L001_I1_001.fastq	TBD	/scratch/groups/sprehei1/Keith_Files/maeveScripts/data/Keith_Maeve1_138650_barcodes.txt	False	PE
+Miseq_data_SarahPreheim_Sept2016	*R1_001.fastq	*R2_001.fastq			/scratch/groups/sprehei1/Keith_Files/maeveScripts/data/Keith_Maeve1_138650_barcodes.txt	True	PE
+sprehei1_122704	A6448s_1_1_merged.fastq	A6448s_1_3_merged.fastq	A6448s_1_2_merged.fastq	BayBridge_mapping.txt2	/scratch/groups/sprehei1/Keith_Files/maeveScripts/data/sprehei1_122704_barcodes.txt	False	PE
+sprehei1_123382	Undetermined_S0_L001_R1_001.fastq	Undetermined_S0_L001_R2_001.fastq	Undetermined_S0_L001_I1_001.fastq	BayBridge_mapping.txt2	/scratch/groups/sprehei1/Keith_Files/maeveScripts/data/sprehei1_123382_barcodes.txt	False	PE
