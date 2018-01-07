@@ -23,6 +23,13 @@ REV_PATH=^R^
 BASE_OUT=^OP^
 BCODE=^B^
 
+
+# Preprocess
+PP_DIR=$BASE_OUT/$SEQ_ID/Preprocess
+for i in $IDX_PATH $FWD_PATH $REV_PATH; do
+    ^PWD^/subsect_into_new_dir.sh $i $PP_DIR;
+done;
+
 # auto path shortcuts
 DEMUX_DIR=$BASE_OUT/$SEQ_ID/Demux
 mkdir -p $DEMUX_DIR
