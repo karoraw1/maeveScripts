@@ -60,50 +60,78 @@ descript_string = ("This is the front end setup tool for a mostly DADA2 "
 
 parser = argparse.ArgumentParser(description = descript_string)
 
+m_help = ("Path to a mapping file of the format specified in the README "
+          "under the heading 'Meta-Map Format'")
+
+t_help = ("Path to a trimming params file of the format specified in the"
+          " README under the heading 'Trimming Spec File'. NOTE: either "
+          " `-m` or `-t` must be specified for script to work")
+
+parser.add_argument('-m', action='store', dest='meta_map',
+                       help=m_help)
+
+parser.add_argument('-t', action='store', dest='trim_specs',
+                    help=t_help)
+
 reqd_args = parser.add_argument_group('Required argument flags')
 
 i_help = ("Path to a readable directory that contains multiple different"
           " folders for each sequencing run to analyze")
 o_help = ("Path to a writable directory for the outputs and intermediate"
           " files.")
-m_help = ("Path to a mapping file of the format specified in the README "
-          "under the heading 'Meta-Map Format'")
 
 reqd_args.add_argument('-i', action='store', dest='read_dir', 
                        help=i_help, required=True)
 reqd_args.add_argument('-o', action='store', dest='write_dir',
                        help=o_help, required=True)
-reqd_args.add_argument('-m', action='store', dest='meta_map',
-                       help=m_help, required=True)
 
 args = parser.parse_args()
 
-arg_types = ["input directory", "output directory", "meta mapping file\n"]
-arg_list = [args.read_dir, args.write_dir, args.meta_map]
+reqd_types = ["input directory", "output directory"]
+reqd_args = [args.read_dir, args.write_dir]
 
 print "\nInput Checks\n------------"
-for this_arg, arg_t in zip(arg_list, arg_types):
+for this_arg, arg_t in zip(reqd_args, reqd_types):
     print_name = os.path.basename(this_arg)
     if os.path.exists(this_arg):
         print "`{}` is a valid path for the {}".format(print_name, arg_t)
     else:
         sys.exit("`{}` is an invalid path to a {}\n".format(this_arg, arg_t))
 
-meta_map_df = pd.read_csv(args.meta_map, sep="\t")
+opt_types = ["Meta Map", "Trim Spec"]
+opt_objs = [args.meta_map, args.trim_specs]
+jobs_ = 0
 
-# default designations
-seqIDs = meta_map_df.ix[:, meta_map_df.columns[0]].tolist()
-inPaths = [os.path.join(args.read_dir, i) for i in seqIDs]
-outPaths = [os.path.join(args.write_dir, i) for i in seqIDs]
-map(safe_mkdir, outPaths)
+for cmd_type, this_arg in zip(opt_types, opt_objs):
+    if (this_arg and cmd_type == "Meta Map"):
+        print "Creating scripts for demultiplexing"
+        task = "Demux"
+        jobs_ += 1
+    elif (this_arg and cmd_type == "Trim Spec"):
+        print "Creating scripts for trimming"
+        jobs_ += 1 
+        task = "Trim"
 
-row_list = [meta_map_df.ix[idx, :].tolist() for idx in xrange(len(seqIDs))]
-packing_list = zip(outPaths, row_list, inPaths)
-script_list = map(write_demux_and_qual_assess, packing_list)
+if jobs_ != 1:
+    sys.exit("Need to specify a single task")
 
-meta_script_path = os.path.join(args.write_dir, "meta_script.sh")
-with open(meta_script_path, "w") as msp_fh:
-    for sL in script_list:
-        msp_fh.write("sbatch " + sL + "\n")
+if task == "Demux":
+    meta_map_df = pd.read_csv(args.meta_map, sep="\t")
 
+    # default designations
+    seqIDs = meta_map_df.ix[:, meta_map_df.columns[0]].tolist()
+    inPaths = [os.path.join(args.read_dir, i) for i in seqIDs]
+    outPaths = [os.path.join(args.write_dir, i) for i in seqIDs]
+    map(safe_mkdir, outPaths)
 
+    row_list = [meta_map_df.ix[idx, :].tolist() for idx in xrange(len(seqIDs))]
+    packing_list = zip(outPaths, row_list, inPaths)
+    script_list = map(write_demux_and_qual_assess, packing_list)
+
+    meta_script_path = os.path.join(args.write_dir, "meta_script.sh")
+    with open(meta_script_path, "w") as msp_fh:
+        for sL in script_list:
+            msp_fh.write("sbatch " + sL + "\n")
+elif task == "Trim":
+   trim_df = pd.read_csv(args.trim_specs, sep=",")
+   print trim_df.SeqID.unique()
