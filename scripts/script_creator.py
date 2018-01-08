@@ -33,6 +33,11 @@ run.
  - the name of the index file if there is one
  - a demultiplexing boolean flag ("T" or "F")
  - the file path of a list of barcode sequences and sample names
+ - a boolean if you want the scripts to check sequence header formatting
+   matches between files (required for demultiplexing)
+ - a boolean if you want the scripts to remove the last two chars of 
+   all sequence headers ( makes older sequencing files compatible with
+   demuxing script)
 
 
 
@@ -49,7 +54,9 @@ descript_string = ("This is the front end setup tool for a mostly DADA2 "
                    "states of process and to create a custom shell "
                    "script for each that can be submitted to MARCC or "
                    "AWS potentially allowing each file or set of files "
-                   "to be processed in parallel.")
+                   "to be processed in parallel.\n\n\tExample Usage:\n\t"
+                   "python script_creator.py -i $IN_DIR -o $OUT_DIR -m "
+                   "../mapping_file.tsv")
 
 parser = argparse.ArgumentParser(description = descript_string)
 

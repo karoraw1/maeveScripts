@@ -194,4 +194,13 @@ for sID in seqIDs:
         demux_df.ix[sID, "Rev"] = rev_path
         demux_df.ix[sID, "Idx"] = idx_path
 
+
+seqIDs2 = ['esakows1_132789', 'Keith_Maeve1_138650', 'Miseq_data_SarahPreheim_Sept2016', 'sprehei1_122704', 'sprehei1_123382']
+checkHead = [True, True, False, True, True]
+fixHead = [False, False, False, True, False]
+check_srs = pd.Series(checkHead, index=seqIDs2)
+fix_srs = pd.Series(fixHead, index=seqIDs2)
+demux_df.loc[:, "CheckHeaders"] = check_srs
+demux_df.loc[:, "FixHeaders"] = fix_srs
 demux_df.to_csv("../data/mapping_file.tsv", sep="\t")
+

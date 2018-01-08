@@ -32,21 +32,7 @@ REV_PATH=$RAW_BASE/$SEQ_ID/$RAW_REV
 DEMUX_DIR=$BASE_OUT/$SEQ_ID/Demux
 #mkdir -p $DEMUX_DIR
 
-vsearch --fastq_truncee --fastq_mergepairs  --reverse fastqfile (--fastaout | --fastqout | --fastaout_notmerged_fwd
-| --fastaout_notmerged_rev|--fastqout_notmerged_fwd | --fastqout_notmerged_rev |
---eetabbedout) outputfile [options] --threads 48
 
-## combine paired end reads
-#mkdir Flash_Files
-#scripts/flash Undetermined_S0_L001_R1_001.fastq.gz Undetermined_S0_L001_R2_001.fastq.gz -o Flash_Files -M 300
-
-## add orphaned reads back
-
-## print out read lengths and unique counts 
-#python scripts/prepForDBotu.py -i demux_derep_trim_dirs.txt
-
-# 
-#python scripts/prepForDBotu.py -i demux_derep_trim_dirs.txt -trim L270H281 -trim-out /data/sprehei1/Keith_Maeve1_138650/Truncated_Fastq_4
 #Rscript scripts/learnErrors.r
 #Rscript scripts/callOTUsAndnoChim.r
 #Rscript scripts/assignTaxonomy.r

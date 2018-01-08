@@ -39,14 +39,34 @@ def path_or_file(dirname, basename, glob_bool):
         
 
 def write_demux_and_qual_assess(paths_and_row):
+    """
+    This takes in a row of the mapping file and creates
+    a custom script in the subdirectory of the main 
+    output directory for checking headers & demultiplexing
+    """
+
     base_out_seqid, row_entry, base_in  = paths_and_row
     base_out = os.path.dirname(base_out_seqid)
-    sid, fwd, rev, idxF, map_, bcode, demux_bool, readType = row_entry
+
+    sid, fwd, rev, idxF, map_, bcode, demux_bool, readType, chkH, fixH = row_entry
     OutScriptPath = os.path.join(base_out_seqid, sid+"_step1.sh")
+
     # not demuxed
     with open("pipeline_1.sh", "r") as p1_fh:
         p1_text = p1_fh.read().split("\n")
 
+    # default checks and corrects headers
+    if chkH or fixH:
+        # headers must be checked if they are to be corrected
+        if fixH:
+            pass
+        # if only checking is required, the copying step is removed
+        else:
+            p1_text[28:32] = [""]*4
+    # if neither are required, the entire preprocessing block is removed
+    else:
+        p1_text[25:37] = [""]*12
+        
     if not demux_bool:
         fwd_path = path_or_file(base_in, fwd, False)
         rev_path = path_or_file(base_in, rev, False)
@@ -55,14 +75,15 @@ def write_demux_and_qual_assess(paths_and_row):
     else:
         fwd_path = path_or_file(base_in, fwd, True)
         rev_path = path_or_file(base_in, rev, True)
-        del p1_text[29:42]
-        del p1_text[5:8]
+        p1_text[25:37] = [""]*12
+        p1_text[42:57] = [""]*15
+        p1_text[5:8] = [""]*3
         p1_text[4] = p1_text[4].split("=")[0]+"=0:15:00"
         p1_text[-1] = p1_text[27]
-        p1_text[26] = "ln -s $FWD_PATH -t $DEMUX_DIR"
-        p1_text[27] = "ln -s $REV_PATH -t $DEMUX_DIR"
-        del p1_text[16]
-        del p1_text[19]        
+        p1_text[42] = "ln -s $FWD_PATH -t $DEMUX_DIR"
+        p1_text[43] = "ln -s $REV_PATH -t $DEMUX_DIR"
+        p1_text[45] = p1_text[57]
+        p1_text[57], p1_text[19], p1_text[23] = "", "", ""
 
     rep_strs = ["^PWD^", "^SID^", "^F^", "^R^", "^OP^"]
     replacements = [os.getcwd(), sid, fwd_path, rev_path, base_out]

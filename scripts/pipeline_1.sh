@@ -23,12 +23,19 @@ REV_PATH=^R^
 BASE_OUT=^OP^
 BCODE=^B^
 
-
 # Preprocess
 PP_DIR=$BASE_OUT/$SEQ_ID/Preprocess
+mkdir -p $PP_DIR
+parallel -j 3 "^PWD^/trim_last_two_header_chars.sh {} $PP_DIR" ::: $IDX_PATH $FWD_PATH $REV_PATH
+FWD_PATH=$PP_DIR/`basename $FWD_PATH`;
+REV_PATH=$PP_DIR/`basename $REV_PATH`;
+IDX_PATH=$PP_DIR/`basename $IDX_PATH`;
+
 for i in $IDX_PATH $FWD_PATH $REV_PATH; do
     ^PWD^/subsect_into_new_dir.sh $i $PP_DIR;
 done;
+python ^PWD^/check_headers.py $PP_DIR
+
 
 # auto path shortcuts
 DEMUX_DIR=$BASE_OUT/$SEQ_ID/Demux
