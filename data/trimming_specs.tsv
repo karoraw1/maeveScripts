@@ -1,6 +1,11 @@
-SeqIDs,truncQ,truncLen,trimLeft,maxEE 
-"Keith_Maeve1_138650",30
-"Miseq_data_SarahPreheim_Sept2016",30
-"esakows1_132789",30
-"sprehei1_122704",30
-"sprehei1_123382",30
+SeqID,R,truncQ,truncLen,trimLeft,maxEE 
+"esakows1_132789",1,30,240,5,2
+"esakows1_132789",2,30,215,8,2
+"Keith_Maeve1_138650",1,30,280,5,2
+"Keith_Maeve1_138650",2,30,220,5,2
+"Miseq_data_SarahPreheim_Sept2016",1,30,110,10,2
+"Miseq_data_SarahPreheim_Sept2016",2,30,100,10,2
+"sprehei1_122704",1,30,210,10,2
+"sprehei1_122704",2,30,210,10,2
+"sprehei1_123382",1,30,210,10,2
+"sprehei1_123382",2,30,210,10,2
