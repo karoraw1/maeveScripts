@@ -23,15 +23,26 @@ maxEE_arg = c(fwd_row[["maxEE"]], rev_row[["maxEE"]])
 # find files
 pre_fnFs <- sort(list.files(in_path, pattern="R1.fastq"))
 pre_fnRs <- sort(list.files(in_path, pattern="R2.fastq"))
+fnFs = file.path(in_path, pre_fnFs)
+fnRs = file.path(in_path, pre_fnRs)
+
+if (length(pre_fnFs) == 0) {
+    pre_fnFs <- sort(list.files(in_path, pattern="R1_001.fastq"))
+    pre_fnRs <- sort(list.files(in_path, pattern="R2_001.fastq"))
+}
 
 # make new files
 sample.names <- sapply(strsplit(pre_fnFs, "[.]"), `[`, 1)
 filtFs <- file.path(out_path, paste0(sample.names, "_F_filt.fastq"))
 filtRs <- file.path(out_path, paste0(sample.names, "_R_filt.fastq"))
 
-filterAndTrim(pre_fnFs, fnFs, pre_fnRs, filtRs,
-              compress=FALSE, truncQ=trunQ_arg[1],
-              truncLen=truncLen_arg, rm.phix=TRUE, 
-              verbose=TRUE, multithread=TRUE,
-              maxN=0, trimLeft=trimLeft_arg,
-              maxEE=maxEE_arg)
+out = filterAndTrim(fnFs, filtFs, fnRs, filtRs,
+                    compress=FALSE, truncQ=trunQ_arg[1],
+                    truncLen=truncLen_arg, rm.phix=TRUE, 
+                    verbose=TRUE, multithread=TRUE,
+                    maxN=0, trimLeft=trimLeft_arg,
+                    maxEE=maxEE_arg)
+
+retained = mean(out[,"reads.out"]/out[,"reads.in"])
+print( paste("Retained", retained) )
+

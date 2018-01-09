@@ -55,5 +55,5 @@ for header in `ls $DEMUX_DIR/*.headers`; do
     filterbyname.sh in=$FWD_PATH in2=$REV_PATH out=$sample_path.R1.fastq out2=$sample_path.R2.fastq names=$header include=t;
 done
 
-Rscript ^PWD^/quality_plot.R $BASE_OUT $SEQ_ID
+Rscript ^PWD^/quality_plot.R $BASE_OUT $SEQ_ID Demux
 
