@@ -78,50 +78,39 @@ if task == "Demultiplexing":
     row_list = [meta_map_df.ix[idx, :].tolist() for idx in xrange(len(seqIDs))]
     packing_list = zip(outPaths, row_list, inPaths)
     script_list = map(write_demux_and_qual_assess, packing_list)
-
-    meta_script_path = os.path.join(args.write_dir, "meta_script_d.sh")
-    with open(meta_script_path, "w") as msp_fh:
-        for sL in script_list:
-            msp_fh.write("sbatch " + sL + "\n")
+    make_meta_script(args.write_dir, "meta_script_d.sh", script_list)
 
 elif task == "Trimming":
 
     trim_df = pd.read_csv(args.trim_specs, sep=",")
     seqIDs = trim_df.SeqID.unique()
     grouped_args = [(sID, args.write_dir, args.trim_specs) for sID in seqIDs]
+    script_list = map(trim_and_qual_assess, grouped_args)
+    make_meta_script(args.write_dir, "meta_script_t.sh", script_list)
 
-    def trim_and_qual_asses(grouped_args):
-        seq_id, base_out, t_stat = grouped_args
-        OutScriptPath = os.path.join(base_out, seq_id, "Step2.sh")
-        replacements = [seq_id, base_out, t_stat, os.getcwd()]
-        repl_matches = ["^SID^", "^OP^", "^T^", "^PWD^"]
-        with open("pipeline_2.sh", "r") as p2_fh:
-            p2_str = p2_fh.read()
-        for in_, out_ in zip(replacements, repl_matches):
-             p2_str = p2_str.replace(out_, in_)
-        with open(OutScriptPath, "w") as osp_fh:
-            osp_fh.write(p2_str)
-        return OutScriptPath
-
-    script_list = map(trim_and_qual_asses, grouped_args)
-
-    meta_script_path = os.path.join(args.write_dir, "meta_script_t.sh")
-
-    with open(meta_script_path, "w") as msp_fh:
-        for sL in script_list:
-            msp_fh.write("sbatch " + sL + "\n")
 elif task == "Call OTUS":
-
     meta_map_df = pd.read_csv(args.meta_map, sep="\t")
     seqIDs = meta_map_df.ix[:, meta_map_df.columns[0]].tolist()
+    grouped_args = []
     for sID in seqIDs:
         sID_bool = meta_map_df.ix[:, meta_map_df.columns[0]] == sID
-        sID_rt = meta_map_df.ix[sID_bool, "ReadTypes"]
-        sID_tfs1 = meta_map_df.ix[sID_bool, "TrimmedFileSuffix1"]
-        sID_tfs2 = meta_map_df.ix[sID_bool, "TrimmedFileSuffix2"]
+        sID_rt = meta_map_df.ix[sID_bool, "ReadTypes"][0]
+        sID_tfs1 = meta_map_df.ix[sID_bool, "TrimmedFileSuffix1"][0]
+        sID_tfs2 = meta_map_df.ix[sID_bool, "TrimmedFileSuffix2"][0]
+        if sID_rt == "PENO":
+            # for non-overlapping single end, we process both independently 
+            # and append the direction to the sample name
+            sID_ss = "_filt"
+        else:
+            # for paired end, we use the forward read
+            sID_ss = sID_tfs1.split(".")[0]
 
-    str_repl = ["^SID^", "^OP^", "^S1^", "^S2^", "^SS^", "^PWD^"]
-    replacements = []
+        grouped_args.append( ((sID, args.write_dir, sID_tfs1, 
+                              sID_tfs2, sID_ss, os.getcwd()), sID_rt ))
+
+    script_list = map(analysis_pipeline, grouped_args)
+    make_meta_script(args.write_dir, "meta_script_a.sh", script_list)
 else:
-    sys.exit("No task specified (-t/-m)")
+    sys.exit("No task specified. See arg pairings for each possible task")
+
 

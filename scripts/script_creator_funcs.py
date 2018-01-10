@@ -100,7 +100,9 @@ def write_demux_and_qual_assess(paths_and_row):
 
     return OutScriptPath
 
-def trim_and_qual_asses(grouped_args):
+def trim_and_qual_assess(grouped_args):
+    """
+    """
     seq_id, base_out, t_stat = grouped_args
     OutScriptPath = os.path.join(base_out, seq_id, "Step2.sh")
     replacements = [seq_id, base_out, t_stat, os.getcwd()]
@@ -112,3 +114,39 @@ def trim_and_qual_asses(grouped_args):
     with open(OutScriptPath, "w") as osp_fh:
         osp_fh.write(p2_str)
     return OutScriptPath
+
+def analysis_pipeline(grouped_args_):
+    """ 
+    """
+    replacements, analysis_type = grouped_args_
+    str_repl = ["^SID^", "^OP^", "^S1^", "^S2^", "^SS^", "^PWD^"]
+    base_out_seqid = os.path.join(replacements[1], replacements[0])
+    OutScriptPath = os.path.join(base_out_seqid, sid[:16]+"_step3.sh")
+
+
+    with open("pipeline_3.sh", "r") as p3_fh:
+        p3_text = p3_fh.read().split("\n")
+    
+    if analysis_type == "PENO":
+      p3_text[24] = ""
+    elif analysis_type == "PEO":
+      p3_text[26] = p3_text[28] = ""
+    else:
+      sys.exit("invalid Read Type entered in Meta-Map")
+
+    p3_tomod = "\n".join(p3_text)
+
+    for real_, placeholder_ in zip(replacements, str_repl):
+      p3_tomod = p3_tomod.replace(placeholder_, real_)
+
+    with open(OutScriptPath, "w") as osp_fh:
+        osp_fh.write(p3_tomod)
+
+    return OutScriptPath
+
+def make_meta_script(base_, fname, scriptList):
+        meta_script_path = os.path.join(base_, fname)
+        with open(meta_script_path, "w") as msp_fh:
+            for sL in script_list:
+                msp_fh.write("sbatch " + sL + "\n")
+        return
