@@ -1,4 +1,5 @@
 library(dada2)
+set.seed(100)
 
 # command line arguments
 args <- commandArgs(TRUE)
@@ -6,62 +7,55 @@ args <- commandArgs(TRUE)
 # read in location
 base_path <- args[1]
 seq_ID <- args[2]
-fname_spacer <- args[3]
+fwd_ID <- args[3]
+sample_splitter <- args[4]
+n_threads <- strtoi(args[5])
 trim_path = file.path(base_path, seq_ID, "Trim")
 
-
-pre_fnFs <- sort(list.files(trim_path, pattern=".fastq"))
-sample.names <- sapply(strsplit(pre_fnFs, "[.]"), `[`, 1)
+# get file & sample names & paths
+pre_fnFs <- sort(list.files(trim_path, pattern=fwd_ID))
+sample.names <- sapply(strsplit(pre_fnFs, sample_splitter), `[`, 1)
 fnFs <- file.path(trim_path, pre_fnFs)
 names(fnFs) <- sample.names
-error_file_name = paste(substr(seq_ID, 1, 15), "errorsWS.RData", sep="_")
-error_file_path = file.path(base_path, seq_ID, error_file_name)
-set.seed(100)
 
-write(error_file_path, stdout())
-write(length(pre_fnFs), stdout())
+# make intermediate saved files
+error_file_name_F = paste(substr(seq_ID, 1, 15), "errorsWS.RData", sep="_")
+error_file_path_F = file.path(base_path, seq_ID, error_file_name_F)
 
-err <- learnErrors(fnFs, multithread=TRUE, randomize=TRUE)
-save(err, file=error_file_path)
-
-
-dds <- vector("list", length(sample.names))
-names(dds) <- sample.names
-
-for(sam in sample.names) {
-  cat("Processing:", sam, "\n")
-  derep <- derepFastq(fnFs[[sam]])
-  dds[[sam]] <- dada(derep, err=err, multithread=TRUE)
-}
-
-#save(errR, file=error_file_path_R)
-write(paste("Writing (R) errors to", error_file_name_R), stdout())    
+# fit error model
+write(paste("Start Errors (1)", Sys.time() ), stdout())
+errF <- learnErrors(fnFs, multithread=n_threads, randomize=TRUE)
+save(errF, file=error_file_path_F)
+write(paste("Writing errors to", error_file_name_F), stdout())
 
 # dereplicate & call OTUs
 dds <- vector("list", length(sample.names))
 names(dds) <- sample.names
 
 for(sam in sample.names) {
-  cat("Processing:", sam, "\n")
-#  derepF <- derepFastq(fnFs[[sam]])
-#  derepR <- derepFastq(fnRs[[sam]])
-#  ddF <- dada(derepF, err=errF, multithread=TRUE)
-#  ddF <- dada(derepR, err=errR, multithread=TRUE)
-#  merger <- mergePairs(ddF, derepF, ddR, derepR)
-#  dds[[sam]] <- merger
+   cat("Processing:", sam, "\n")
+   write(paste("Start Derep", Sys.time() ), stdout())
+   derepF <- derepFastq(fnFs[[sam]])
+   write(paste("Start DADA", Sys.time() ), stdout())
+   dds[[sam]] <- dada(derepF, err=errF, multithread=n_threads)
 }
 
 otu_tab_name = paste(substr(seq_ID, 1, 15), "raw_tab.RData", sep="_")
 otu_tab_path = file.path(base_path, seq_ID, otu_tab_name)
-write(paste("Writing (R) errors to", otu_tab_path), stdout())
+write(paste("Finished DADA", Sys.time() ), stdout())
+write(paste("Writing raw table to", otu_tab_path), stdout())
 save(dds, file=otu_tab_path)
 
 seq_tab_name = paste(substr(seq_ID, 1, 15), "seqtab_chim.rds", sep="_")
-seq_tab_path = file.path(base_path, seq_ID, seq_tab_name)
+seq_tab_path = file.path(base_path, seq_ID, seq_tab_name)             
 seqtab1 <- makeSequenceTable(dds)
+write(paste("Finished Seq table", Sys.time() ), stdout())
+write(paste("Writing seq table to", seq_tab_path), stdout())
 saveRDS(seqtab1, seq_tab_path)
 
 nochim_tab_name = paste(substr(seq_ID, 1, 15), "seqtab_nochim.rds", sep="_")
 nochim_tab_path = file.path(base_path, seq_ID, nochim_tab_name)
-seqtab2 <- removeBimeraDenovo(seqtab1, method="consensus", multithread=TRUE)
+seqtab2 <- removeBimeraDenovo(seqtab1, method="consensus", multithread=n_threads)
+write(paste("Finished Chimera Checking", Sys.time() ), stdout())
+write(paste("Writing dechimera'd table to", nochim_tab_path), stdout())
 saveRDS(seqtab2, nochim_tab_path)
