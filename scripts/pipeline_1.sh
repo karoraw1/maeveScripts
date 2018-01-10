@@ -56,4 +56,3 @@ for header in `ls $DEMUX_DIR/*.headers`; do
 done
 
 Rscript ^PWD^/quality_plot.R $BASE_OUT $SEQ_ID Demux
-

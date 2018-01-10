@@ -1,5 +1,15 @@
 library(dada2)
-path <- "/data/sprehei1/Keith_Maeve1_138650/Truncated_Fastq_4"
+
+
+# command line arguments
+args <- commandArgs(TRUE)
+
+# read in location
+trim_path <- args[1]
+#seq_ID <- args[1]
+#in_path <- args[2]
+#out_path <- args[4]
+
 pre_fnFs <- sort(list.files(path, pattern=".fastq"))
 sample.names <- sapply(strsplit(pre_fnFs, "[.]"), `[`, 1)
 filt_path <- "/data/sprehei1/Keith_Maeve1_138650/Filtered_Fastq_5"
