@@ -15,11 +15,13 @@ trim_path = file.path(base_path, seq_ID, "Trim")
 # get file & sample names & paths
 pre_fnFs <- sort(list.files(trim_path, pattern=fwd_ID))
 sample.names <- sapply(strsplit(pre_fnFs, sample_splitter), `[`, 1)
+n_l = nchar(sample.names[1])
+spacer = substr(sample.names[1], n_l, n_l)
 fnFs <- file.path(trim_path, pre_fnFs)
 names(fnFs) <- sample.names
 
 # make intermediate saved files
-error_file_name_F = paste(substr(seq_ID, 1, 15), "errorsWS.RData", sep="_")
+error_file_name_F = paste(substr(seq_ID, 1, 15), spacer, "errorsWS.RData", sep="_")
 error_file_path_F = file.path(base_path, seq_ID, error_file_name_F)
 
 # fit error model
@@ -40,20 +42,20 @@ for(sam in sample.names) {
    dds[[sam]] <- dada(derepF, err=errF, multithread=n_threads)
 }
 
-otu_tab_name = paste(substr(seq_ID, 1, 15), "raw_tab.RData", sep="_")
+otu_tab_name = paste(substr(seq_ID, 1, 15), spacer, "raw_tab.RData", sep="_")
 otu_tab_path = file.path(base_path, seq_ID, otu_tab_name)
 write(paste("Finished DADA", Sys.time() ), stdout())
 write(paste("Writing raw table to", otu_tab_path), stdout())
 save(dds, file=otu_tab_path)
 
-seq_tab_name = paste(substr(seq_ID, 1, 15), "seqtab_chim.rds", sep="_")
+seq_tab_name = paste(substr(seq_ID, 1, 15), spacer, "seqtab_chim.rds", sep="_")
 seq_tab_path = file.path(base_path, seq_ID, seq_tab_name)             
 seqtab1 <- makeSequenceTable(dds)
 write(paste("Finished Seq table", Sys.time() ), stdout())
 write(paste("Writing seq table to", seq_tab_path), stdout())
 saveRDS(seqtab1, seq_tab_path)
 
-nochim_tab_name = paste(substr(seq_ID, 1, 15), "seqtab_nochim.rds", sep="_")
+nochim_tab_name = paste(substr(seq_ID, 1, 15), spacer, "seqtab_nochim.rds", sep="_")
 nochim_tab_path = file.path(base_path, seq_ID, nochim_tab_name)
 seqtab2 <- removeBimeraDenovo(seqtab1, method="consensus", multithread=n_threads)
 write(paste("Finished Chimera Checking", Sys.time() ), stdout())
