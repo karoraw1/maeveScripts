@@ -1,0 +1,11 @@
+SeqID,R,truncQ,truncLen,trimLeft,maxEE,checked
+"esakows1_132789",1,5,220,8,3,True
+"esakows1_132789",2,5,190,8,3,True
+"Keith_Maeve1_138650",1,5,240,8,3,True
+"Keith_Maeve1_138650",2,5,220,8,3,True
+"Miseq_data_SarahPreheim_Sept2016",1,5,155,10,3,True
+"Miseq_data_SarahPreheim_Sept2016",2,5,135,10,3,True
+"sprehei1_122704",1,5,90,10,4,True
+"sprehei1_122704",2,5,92,10,4,True
+"sprehei1_123382",1,5,190,10,3,True
+"sprehei1_123382",2,5,240,10,3,True
