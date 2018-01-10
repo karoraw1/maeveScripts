@@ -99,3 +99,16 @@ def write_demux_and_qual_assess(paths_and_row):
         osp_fh.write(p1_string)
 
     return OutScriptPath
+
+def trim_and_qual_asses(grouped_args):
+    seq_id, base_out, t_stat = grouped_args
+    OutScriptPath = os.path.join(base_out, seq_id, "Step2.sh")
+    replacements = [seq_id, base_out, t_stat, os.getcwd()]
+    repl_matches = ["^SID^", "^OP^", "^T^", "^PWD^"]
+    with open("pipeline_2.sh", "r") as p2_fh:
+        p2_str = p2_fh.read()
+    for in_, out_ in zip(replacements, repl_matches):
+         p2_str = p2_str.replace(out_, in_)
+    with open(OutScriptPath, "w") as osp_fh:
+        osp_fh.write(p2_str)
+    return OutScriptPath

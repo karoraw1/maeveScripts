@@ -20,7 +20,9 @@ descript_string = ("This is the front end setup tool for a mostly DADA2 "
                    " input, output, and meta-map should be provided. ("
                    "-i, -o, -m). For trimming, The output path used in "
                    "the demultiplexing and a trimming spec sheet should "
-                   "be provided (-o, -t).")
+                   "be provided (-o, -t). For OTU calling, just the "
+                   "location of the trimmed data and the meta-map (-o, -"
+                   "m)")
 
 parser = argparse.ArgumentParser(description = descript_string)
 
@@ -53,14 +55,16 @@ reqd_args.add_argument('-o', action='store', dest='write_dir',
 args = parser.parse_args()
 
 print "\nInput Checks\n------------"
-if args.meta_map:
+if (args.meta_map and args.read_dir and args.write_dir):
     task = "Demultiplexing"
-    if not args.read_dir:
-        sys.exit("No input directory provided")
-elif args.trim_specs:
+elif (args.trim_specs and args.write_dir):
     task = "Trimming"
+elif (args.meta_map and args.write_dir):
+    task = "Call OTUS"
 
-print "\tScript type set to {}".format(task)
+print "Script type set to `{}`".format(task)
+
+sys.exit()
 
 if task == "Demultiplexing":
     meta_map_df = pd.read_csv(args.meta_map, sep="\t")
@@ -106,6 +110,18 @@ elif task == "Trimming":
     with open(meta_script_path, "w") as msp_fh:
         for sL in script_list:
             msp_fh.write("sbatch " + sL + "\n")
+elif task == "Call OTUS":
+
+    meta_map_df = pd.read_csv(args.meta_map, sep="\t")
+    seqIDs = meta_map_df.ix[:, meta_map_df.columns[0]].tolist()
+    for sID in seqIDs:
+        sID_bool = meta_map_df.ix[:, meta_map_df.columns[0]] == sID
+        sID_rt = meta_map_df.ix[sID_bool, "ReadTypes"]
+        sID_tfs1 = meta_map_df.ix[sID_bool, "TrimmedFileSuffix1"]
+        sID_tfs2 = meta_map_df.ix[sID_bool, "TrimmedFileSuffix2"]
+
+    str_repl = ["^SID^", "^OP^", "^S1^", "^S2^", "^SS^", "^PWD^"]
+    replacements = []
 else:
     sys.exit("No task specified (-t/-m)")
 
