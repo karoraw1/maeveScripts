@@ -31,15 +31,25 @@ error_file_path_R = file.path(base_path, seq_ID, error_file_name_R)
 
 # fit error model
 
-write(paste("Start Errors (1)", Sys.time() ), stdout())
-errF <- learnErrors(fnFs, multithread=n_threads, randomize=TRUE)
-save(errF, file=error_file_path_F)
-write(paste("Writing (F) errors to", error_file_name_F), stdout())
-write(paste("Start Errors (2)", Sys.time() ), stdout())
+if (file.exists(error_file_path_F)){
+    write(paste("Loading (F) errors from", error_file_name_F), stdout())
+    load(error_file_path_F)
+} else {
+    write(paste("Start Errors (1)", Sys.time() ), stdout())
+    errF <- learnErrors(fnFs, multithread=n_threads, randomize=TRUE)
+    save(errF, file=error_file_path_F)
+    write(paste("Writing (F) errors to", error_file_name_F), stdout())
+}
 
-errR <- learnErrors(fnRs, multithread=n_threads, randomize=TRUE)
-save(errR, file=error_file_path_R)
-write(paste("Writing (R) errors to", error_file_name_R), stdout())
+if (file.exists(error_file_path_R)){
+    write(paste("Loading (R) errors from", error_file_name_R), stdout())
+    load(error_file_path_R)
+} else {
+    write(paste("Start Errors (2)", Sys.time() ), stdout())
+    errR <- learnErrors(fnRs, multithread=n_threads, randomize=TRUE)
+    save(errR, file=error_file_path_R)
+    write(paste("Writing (R) errors to", error_file_name_R), stdout())
+}
 
 # dereplicate & call OTUs
 dds <- vector("list", length(sample.names))
