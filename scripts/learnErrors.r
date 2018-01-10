@@ -1,20 +1,23 @@
 library(dada2)
 
-
 # command line arguments
 args <- commandArgs(TRUE)
 
 # read in location
-trim_path <- args[1]
-#seq_ID <- args[1]
-#in_path <- args[2]
-#out_path <- args[4]
+base_path <- args[1]
+seq_ID <- args[2]
+trim_path = file.path(base_path, seq_ID, "Trim")
 
-pre_fnFs <- sort(list.files(path, pattern=".fastq"))
+pre_fnFs <- sort(list.files(trim_path, pattern=".fastq"))
 sample.names <- sapply(strsplit(pre_fnFs, "[.]"), `[`, 1)
-filt_path <- "/data/sprehei1/Keith_Maeve1_138650/Filtered_Fastq_5"
-fnFs <- file.path(filt_path, paste0(sample.names, ".filt.fastq"))
+fnFs <- file.path(trim_path, pre_fnFs)
 names(fnFs) <- sample.names
+error_file_name = paste(substr(seq_ID, 1, 15), "errorsWS.RData", sep="_")
+error_file_path = file.path(base_path, seq_ID, error_file_name)
 set.seed(100)
+
+write(error_file_path, stdout())
+write(length(pre_fnFs), stdout())
+
 err <- learnErrors(fnFs, multithread=TRUE, randomize=TRUE)
-save(err, file="/home-3/karoraw1@jhu.edu/work/sprehei1/Keith_Files/maeveScripts/errorsWS.RData")
+save(err, file=error_file_path)
