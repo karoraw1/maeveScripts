@@ -30,11 +30,13 @@ error_file_name_R = paste(substr(seq_ID, 1, 15), "errorsWS_R.RData", sep="_")
 error_file_path_R = file.path(base_path, seq_ID, error_file_name_R)
 
 # fit error model
+
 write(paste("Start Errors (1)", Sys.time() ), stdout())
 errF <- learnErrors(fnFs, multithread=n_threads, randomize=TRUE)
 save(errF, file=error_file_path_F)
 write(paste("Writing (F) errors to", error_file_name_F), stdout())
 write(paste("Start Errors (2)", Sys.time() ), stdout())
+
 errR <- learnErrors(fnRs, multithread=n_threads, randomize=TRUE)
 save(errR, file=error_file_path_R)
 write(paste("Writing (R) errors to", error_file_name_R), stdout())
@@ -52,7 +54,7 @@ for(sam in sample.names) {
    write(paste("Start DADA (1)", Sys.time() ), stdout())
    ddF <- dada(derepF, err=errF, multithread=n_threads)
    write(paste("Start DADA (2)", Sys.time() ), stdout())
-   ddF <- dada(derepR, err=errR, multithread=n_threads)
+   ddR <- dada(derepR, err=errR, multithread=n_threads)
    merger <- mergePairs(ddF, derepF, ddR, derepR)
    dds[[sam]] <- merger
 }

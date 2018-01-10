@@ -8,3 +8,12 @@ During startup - Warning messages:
 7: Setting LC_MEASUREMENT failed, using "C" 
 Loading required package: Rcpp
 Loading required package: methods
+Warning message:
+In dada(drps, err = NULL, selfConsist = TRUE, multithread = multithread) :
+  Self-consistency loop terminated before convergence.
+Warning message:
+In dada(drps, err = NULL, selfConsist = TRUE, multithread = multithread) :
+  Self-consistency loop terminated before convergence.
+Error in mergePairs(ddF, derepF, ddR, derepR) : object 'ddR' not found
+Calls: mergePairs -> is
+Execution halted
