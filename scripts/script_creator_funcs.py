@@ -120,9 +120,8 @@ def analysis_pipeline(grouped_args_):
     """
     replacements, analysis_type = grouped_args_
     str_repl = ["^SID^", "^OP^", "^S1^", "^S2^", "^SS^", "^PWD^"]
-    base_out_seqid = os.path.join(replacements[1], replacements[0])
-    OutScriptPath = os.path.join(base_out_seqid, sid[:16]+"_step3.sh")
-
+    sid = replacements[0]
+    OutScriptPath = os.path.join(replacements[1], sid, sid[:16]+"_step3.sh")
 
     with open("pipeline_3.sh", "r") as p3_fh:
         p3_text = p3_fh.read().split("\n")
@@ -147,6 +146,6 @@ def analysis_pipeline(grouped_args_):
 def make_meta_script(base_, fname, scriptList):
         meta_script_path = os.path.join(base_, fname)
         with open(meta_script_path, "w") as msp_fh:
-            for sL in script_list:
+            for sL in scriptList:
                 msp_fh.write("sbatch " + sL + "\n")
         return

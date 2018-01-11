@@ -1,45 +1,37 @@
-Start Errors (1) 2018-01-10 14:25:07
-Initializing error rates to maximum possible estimate.
-Sample 1 - 339187 reads in 105448 unique sequences.
-Sample 2 - 355119 reads in 105498 unique sequences.
-Sample 3 - 404153 reads in 106545 unique sequences.
-   selfConsist step 2 
-   selfConsist step 3 
-   selfConsist step 4 
-   selfConsist step 5 
-   selfConsist step 6 
-   selfConsist step 7 
-   selfConsist step 8 
-   selfConsist step 9 
-   selfConsist step 10 
-
-Total reads used:  1098459 
-Writing (F) errors to esakows1_132789_errorsWS_F.RData
-Start Errors (2) 2018-01-10 15:41:14
-Initializing error rates to maximum possible estimate.
-Sample 1 - 360824 reads in 144509 unique sequences.
-Sample 2 - 286282 reads in 95727 unique sequences.
-Sample 3 - 35955 reads in 17537 unique sequences.
-Sample 4 - 282614 reads in 126108 unique sequences.
-Sample 5 - 468982 reads in 171540 unique sequences.
-   selfConsist step 2 
-   selfConsist step 3 
-   selfConsist step 4 
-   selfConsist step 5 
-   selfConsist step 6 
-   selfConsist step 7 
-   selfConsist step 8 
-   selfConsist step 9 
-   selfConsist step 10 
-
-Total reads used:  1434657 
-Writing (R) errors to esakows1_132789_errorsWS_R.RData
+Loading (F) errors from esakows1_132789_errorsWS_F.RData
+Loading (R) errors from esakows1_132789_errorsWS_R.RData
 Processing: SB061716TAWCSCB33CD12BR2TR1I87 
-Start Derep (1) 2018-01-10 17:25:31
-Start Derep (2) 2018-01-10 17:25:38
-Start DADA (1) 2018-01-10 17:25:45
+Start Derep (1) 2018-01-10 18:40:50
+Start Derep (2) 2018-01-10 18:41:00
+Start DADA (1) 2018-01-10 18:41:07
 Sample 1 - 471583 reads in 129909 unique sequences.
 
-Start DADA (2) 2018-01-10 17:28:29
+Start DADA (2) 2018-01-10 18:43:51
 Sample 1 - 471583 reads in 179144 unique sequences.
 
+Processing: SB061716TAWCSCB33CD1BR2TR1I80 
+Start Derep (1) 2018-01-10 18:48:40
+Start Derep (2) 2018-01-10 18:48:45
+Start DADA (1) 2018-01-10 18:48:49
+Sample 1 - 331605 reads in 87461 unique sequences.
+
+Start DADA (2) 2018-01-10 18:49:39
+Sample 1 - 331605 reads in 128126 unique sequences.
+
+Processing: SB071116TAWCSCB22D11BR2TR2I613 
+Start Derep (1) 2018-01-10 18:51:46
+Start Derep (2) 2018-01-10 18:51:52
+Start DADA (1) 2018-01-10 18:51:59
+Sample 1 - 431695 reads in 113480 unique sequences.
+
+Start DADA (2) 2018-01-10 18:54:12
+Sample 1 - 431695 reads in 166549 unique sequences.
+
+Processing: SB071116TAWCSCB22D11BR2TR2I616 
+Start Derep (1) 2018-01-10 18:58:20
+Start Derep (2) 2018-01-10 18:58:27
+Start DADA (1) 2018-01-10 18:58:33
+Sample 1 - 444594 reads in 117705 unique sequences.
+
+Start DADA (2) 2018-01-10 19:00:54
+Sample 1 - 444594 reads in 174495 unique sequences.

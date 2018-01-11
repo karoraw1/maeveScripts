@@ -64,8 +64,6 @@ elif (args.meta_map and args.write_dir):
 
 print "Script type set to `{}`".format(task)
 
-sys.exit()
-
 if task == "Demultiplexing":
     meta_map_df = pd.read_csv(args.meta_map, sep="\t")
 
@@ -89,14 +87,16 @@ elif task == "Trimming":
     make_meta_script(args.write_dir, "meta_script_t.sh", script_list)
 
 elif task == "Call OTUS":
+    print "Reading in Map"
     meta_map_df = pd.read_csv(args.meta_map, sep="\t")
     seqIDs = meta_map_df.ix[:, meta_map_df.columns[0]].tolist()
     grouped_args = []
     for sID in seqIDs:
+        print "\tPrepped for {}".format(sID) 
         sID_bool = meta_map_df.ix[:, meta_map_df.columns[0]] == sID
-        sID_rt = meta_map_df.ix[sID_bool, "ReadTypes"][0]
-        sID_tfs1 = meta_map_df.ix[sID_bool, "TrimmedFileSuffix1"][0]
-        sID_tfs2 = meta_map_df.ix[sID_bool, "TrimmedFileSuffix2"][0]
+        sID_rt = meta_map_df.ix[sID_bool, "ReadTypes"].values[0]
+        sID_tfs1 = meta_map_df.ix[sID_bool, "TrimmedFileSuffix1"].values[0]
+        sID_tfs2 = meta_map_df.ix[sID_bool, "TrimmedFileSuffix2"].values[0]
         if sID_rt == "PENO":
             # for non-overlapping single end, we process both independently 
             # and append the direction to the sample name
