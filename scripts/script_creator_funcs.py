@@ -149,3 +149,21 @@ def make_meta_script(base_, fname, scriptList):
             for sL in scriptList:
                 msp_fh.write("sbatch " + sL + "\n")
         return
+
+def taxa_calls(grouped_args):
+    """
+    """
+    seq_id, base_out = grouped_args[1], grouped_args[2]
+    OutScriptPath = os.path.join(base_out, seq_id, "Step4.sh")
+    repls = ["^PWD^", "^SID^","^OP^","^RA^","^RS^"]
+    
+    with open("pipeline_4.sh", "r") as p4_fh:
+        p4_str = p4_fh.read()
+
+    for in_, out_ in zip(grouped_args, repls):
+         p4_str = p4_str.replace(out_, in_)
+
+    with open(OutScriptPath, "w") as osp_fh:
+        osp_fh.write(p4_str)
+
+    return OutScriptPath

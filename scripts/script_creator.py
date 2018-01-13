@@ -22,7 +22,9 @@ descript_string = ("This is the front end setup tool for a mostly DADA2 "
                    "the demultiplexing and a trimming spec sheet should "
                    "be provided (-o, -t). For OTU calling, just the "
                    "location of the trimmed data and the meta-map (-o, -"
-                   "m)")
+                   "m). For taxa assignment, we need -spr (the species "
+                   "level ref database), -ref (the main ref database), "
+                   " and -o and -m from before")
 
 parser = argparse.ArgumentParser(description = descript_string)
 
@@ -35,6 +37,9 @@ t_help = ("Path to a trimming params file of the format specified in the"
 i_help = ("Path to a readable directory that contains multiple different"
           " folders for each sequencing run to analyze")
 
+spr_help = ("Path to the species level DADA2 taxonomy database")
+ref_help = ("Path to a main DADA2 taxonomic database")
+
 parser.add_argument('-m', action='store', dest='meta_map',
                        help=m_help)
 
@@ -43,6 +48,12 @@ parser.add_argument('-t', action='store', dest='trim_specs',
 
 parser.add_argument('-i', action='store', dest='read_dir', 
                     help=i_help)
+
+parser.add_argument('-spr', action='store', dest='sp_ref',
+                    help=spr_help)
+
+parser.add_argument('-ref', action='store', dest='main_ref',
+                    help=ref_help)
 
 reqd_args = parser.add_argument_group('Required argument flags')
 
@@ -59,8 +70,11 @@ if (args.meta_map and args.read_dir and args.write_dir):
     task = "Demultiplexing"
 elif (args.trim_specs and args.write_dir):
     task = "Trimming"
-elif (args.meta_map and args.write_dir):
+elif (args.write_dir and args.main_ref and args.sp_ref):
+    task = "Assign taxonomy"
+elif (args.meta_map and args.write_dir and not args.main_ref):
     task = "Call OTUS"
+
 
 print "Script type set to `{}`".format(task)
 
@@ -110,6 +124,18 @@ elif task == "Call OTUS":
 
     script_list = map(analysis_pipeline, grouped_args)
     make_meta_script(args.write_dir, "meta_script_a.sh", script_list)
+
+elif task == "Assign taxonomy":
+    meta_map_df = pd.read_csv(args.meta_map, sep="\t")
+    seqIDs = meta_map_df.ix[:, meta_map_df.columns[0]].tolist()
+    grouped_args = []
+        
+    for sID in seqIDs:
+        grouped_args.append( (os.getcwd(), sID, args.write_dir, args.main_ref, args.sp_ref ) )
+
+    script_list = map(taxa_calls, grouped_args)
+    make_meta_script(args.write_dir, "meta_script_x.sh", script_list)    
+
 else:
     sys.exit("No task specified. See arg pairings for each possible task")
 
